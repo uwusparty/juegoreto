@@ -66,7 +66,7 @@ Partial Class Login
         Me.TextBox2.Location = New System.Drawing.Point(237, 56)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(222, 23)
-        Me.TextBox2.TabIndex = 3
+        Me.TextBox2.TabIndex = 1
         '
         'btnSalir
         '
@@ -74,7 +74,7 @@ Partial Class Login
         Me.btnSalir.Location = New System.Drawing.Point(361, 172)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(98, 53)
-        Me.btnSalir.TabIndex = 5
+        Me.btnSalir.TabIndex = 4
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
@@ -84,7 +84,7 @@ Partial Class Login
         Me.btnEnviar.Location = New System.Drawing.Point(237, 172)
         Me.btnEnviar.Name = "btnEnviar"
         Me.btnEnviar.Size = New System.Drawing.Size(98, 53)
-        Me.btnEnviar.TabIndex = 6
+        Me.btnEnviar.TabIndex = 3
         Me.btnEnviar.Text = "Enviar"
         Me.btnEnviar.UseVisualStyleBackColor = False
         '

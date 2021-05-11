@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dam1-angel\\Documents\\Visual Basic Projects\\juego\\.vs\\juego reto\\juego reto.vbproj": {}
+    "C:\\Users\\dam1-Ian\\Source\\Repos\\juegoreto\\juego\\juego reto\\juego reto.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\dam1-angel\\Documents\\Visual Basic Projects\\juego\\.vs\\juego reto\\juego reto.vbproj": {
+    "C:\\Users\\dam1-Ian\\Source\\Repos\\juegoreto\\juego\\juego reto\\juego reto.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dam1-angel\\Documents\\Visual Basic Projects\\juego\\.vs\\juego reto\\juego reto.vbproj",
+        "projectUniqueName": "C:\\Users\\dam1-Ian\\Source\\Repos\\juegoreto\\juego\\juego reto\\juego reto.vbproj",
         "projectName": "juego reto",
-        "projectPath": "C:\\Users\\dam1-angel\\Documents\\Visual Basic Projects\\juego\\.vs\\juego reto\\juego reto.vbproj",
-        "packagesPath": "C:\\Users\\dam1-angel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dam1-angel\\Documents\\Visual Basic Projects\\juego\\.vs\\juego reto\\obj\\",
+        "projectPath": "C:\\Users\\dam1-Ian\\Source\\Repos\\juegoreto\\juego\\juego reto\\juego reto.vbproj",
+        "packagesPath": "C:\\Users\\dam1-Ian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dam1-Ian\\Source\\Repos\\juegoreto\\juego\\juego reto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dam1-angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dam1-Ian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

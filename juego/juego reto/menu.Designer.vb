@@ -101,7 +101,7 @@ Partial Class menu
         Me.btnJugar.Location = New System.Drawing.Point(74, 153)
         Me.btnJugar.Name = "btnJugar"
         Me.btnJugar.Size = New System.Drawing.Size(134, 71)
-        Me.btnJugar.TabIndex = 5
+        Me.btnJugar.TabIndex = 1
         Me.btnJugar.Text = "JUGAR"
         Me.btnJugar.UseVisualStyleBackColor = False
         '
@@ -113,8 +113,8 @@ Partial Class menu
         Me.btnLogin.Location = New System.Drawing.Point(339, 246)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(140, 71)
-        Me.btnLogin.TabIndex = 6
-        Me.btnLogin.Text = "LOGIN"
+        Me.btnLogin.TabIndex = 2
+        Me.btnLogin.Text = "INICIAR SESIÓN"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
         'btnIdioma
@@ -125,8 +125,8 @@ Partial Class menu
         Me.btnIdioma.Location = New System.Drawing.Point(74, 350)
         Me.btnIdioma.Name = "btnIdioma"
         Me.btnIdioma.Size = New System.Drawing.Size(134, 71)
-        Me.btnIdioma.TabIndex = 7
-        Me.btnIdioma.Text = "ENGLISH"
+        Me.btnIdioma.TabIndex = 3
+        Me.btnIdioma.Text = "ESPAÑOL"
         Me.btnIdioma.UseVisualStyleBackColor = False
         '
         'btnSalir
@@ -137,7 +137,7 @@ Partial Class menu
         Me.btnSalir.Location = New System.Drawing.Point(339, 442)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(140, 71)
-        Me.btnSalir.TabIndex = 8
+        Me.btnSalir.TabIndex = 4
         Me.btnSalir.Text = "SALIR"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
@@ -157,7 +157,7 @@ Partial Class menu
         Me.btnAmigos.Location = New System.Drawing.Point(414, 48)
         Me.btnAmigos.Name = "btnAmigos"
         Me.btnAmigos.Size = New System.Drawing.Size(76, 38)
-        Me.btnAmigos.TabIndex = 10
+        Me.btnAmigos.TabIndex = 5
         Me.btnAmigos.Text = "Amigos"
         Me.btnAmigos.UseVisualStyleBackColor = True
         '

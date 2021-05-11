@@ -37,3 +37,24 @@ C:\Users\dam1-angel\Documents\Visual Basic Projects\juego\.vs\juego reto\obj\Deb
 C:\Users\dam1-angel\Documents\Visual Basic Projects\juego\.vs\juego reto\obj\Debug\netcoreapp3.1\juego reto.genruntimeconfig.cache
 C:\Users\dam1-angel\Documents\Visual Basic Projects\juego\.vs\juego reto\obj\Debug\netcoreapp3.1\juego_reto.amigos.resources
 C:\Users\dam1-angel\Documents\Visual Basic Projects\juego\.vs\juego reto\obj\Debug\netcoreapp3.1\juego_reto.puntuaciones.resources
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\bin\Debug\netcoreapp3.1\juego reto.exe
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\bin\Debug\netcoreapp3.1\juego reto.deps.json
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\bin\Debug\netcoreapp3.1\juego reto.runtimeconfig.json
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\bin\Debug\netcoreapp3.1\juego reto.runtimeconfig.dev.json
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\bin\Debug\netcoreapp3.1\juego reto.dll
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\bin\Debug\netcoreapp3.1\juego reto.pdb
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego reto.vbprojAssemblyReference.cache
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego_reto.amigos.resources
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego_reto.categoria.resources
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego_reto.Juego.resources
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego_reto.Login.resources
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego_reto.menu.resources
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego_reto.Resources.resources
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego_reto.puntuaciones.resources
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego reto.vbproj.GenerateResource.cache
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego reto.AssemblyInfoInputs.cache
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego reto.AssemblyInfo.vb
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego reto.vbproj.CoreCompileInputs.cache
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego reto.dll
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego reto.pdb
+C:\Users\dam1-Ian\Source\Repos\juegoreto\juego\juego reto\obj\Debug\netcoreapp3.1\juego reto.genruntimeconfig.cache

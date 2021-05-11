@@ -1,6 +1,7 @@
 ﻿Public Class menu
     Public esIngles As Boolean
     Public isLogin As Boolean = False
+    Public formAmigos As amigos
     Private Sub menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnJugar.BackColor = Color.FromArgb(3, 169, 244)
         btnLogin.BackColor = Color.FromArgb(57, 226, 57)
@@ -34,14 +35,16 @@
     End Sub
 
     Private Sub btnIdioma_Click(sender As Object, e As EventArgs) Handles btnIdioma.Click
-        If btnIdioma.Text = "ENGLISH" Then
+        If btnIdioma.Text = "ESPAÑOL" Then
             btnJugar.Text = "PLAY"
-            btnIdioma.Text = "ESPAÑOL"
+            btnLogin.Text = "LOGIN"
+            btnIdioma.Text = "ENGLISH"
             btnSalir.Text = "EXIT"
             esIngles = True
         Else
             btnJugar.Text = "JUGAR"
-            btnIdioma.Text = "ENGLISH"
+            btnLogin.Text = "INICIAR SESIÓN"
+            btnIdioma.Text = "ESPAÑOL"
             btnSalir.Text = "SALIR"
             esIngles = False
         End If
@@ -52,7 +55,13 @@
     End Sub
 
     Private Sub btnAmigos_Click(sender As Object, e As EventArgs) Handles btnAmigos.Click
-        Dim amigos As New amigos
-        amigos.Show()
+        If formAmigos Is Nothing Then
+            formAmigos = New amigos(Me)
+        End If
+        If formAmigos.Visible Then
+            formAmigos.Visible = False
+        Else
+            formAmigos.Visible = True
+        End If
     End Sub
 End Class
