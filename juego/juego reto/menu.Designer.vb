@@ -126,7 +126,7 @@ Partial Class menu
         Me.btnIdioma.Name = "btnIdioma"
         Me.btnIdioma.Size = New System.Drawing.Size(134, 71)
         Me.btnIdioma.TabIndex = 3
-        Me.btnIdioma.Text = "ESPAÑOL"
+        Me.btnIdioma.Text = "CAMBIAR A INGLES"
         Me.btnIdioma.UseVisualStyleBackColor = False
         '
         'btnSalir

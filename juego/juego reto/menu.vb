@@ -2,6 +2,7 @@
     Public esIngles As Boolean
     Public isLogin As Boolean = False
     Public formAmigos As amigos
+    Public user As Integer = -1
     Private Sub menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnJugar.BackColor = Color.FromArgb(3, 169, 244)
         btnLogin.BackColor = Color.FromArgb(57, 226, 57)
@@ -10,11 +11,22 @@
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Dim login As New Login
-        lblMensaje.Hide()
-        login.menu = Me
-        login.Show()
-        Me.Hide()
+        If isLogin = False Then
+            Dim login As New Login
+            lblMensaje.Hide()
+            login.menu = Me
+            login.Show()
+            Me.Hide()
+        Else
+            user = -1
+            If btnIdioma.Text = "CAMBIAR A INGLES" Then
+                btnLogin.Text = "INICIAR SESION"
+            Else
+                btnLogin.Text = "LOGIN"
+            End If
+            isLogin = False
+        End If
+
     End Sub
 
     Private Sub btnJugar_Click(sender As Object, e As EventArgs) Handles btnJugar.Click
@@ -35,18 +47,27 @@
     End Sub
 
     Private Sub btnIdioma_Click(sender As Object, e As EventArgs) Handles btnIdioma.Click
-        If btnIdioma.Text = "ESPAÑOL" Then
+        If btnIdioma.Text = "CAMBIAR A INGLES" Then
             btnJugar.Text = "PLAY"
-            btnLogin.Text = "LOGIN"
-            btnIdioma.Text = "ENGLISH"
+            btnIdioma.Text = "CHANGE TO SPANISH"
             btnSalir.Text = "EXIT"
             esIngles = True
+            If isLogin = False Then
+                btnLogin.Text = "LOGIN"
+            Else
+                btnLogin.Text = "LOGOUT"
+            End If
         Else
             btnJugar.Text = "JUGAR"
             btnLogin.Text = "INICIAR SESIÓN"
-            btnIdioma.Text = "ESPAÑOL"
+            btnIdioma.Text = "CAMBIAR A INGLES"
             btnSalir.Text = "SALIR"
             esIngles = False
+            If isLogin = False Then
+                btnLogin.Text = "INICIAR SESION"
+            Else
+                btnLogin.Text = "CERRAR SESION"
+            End If
         End If
     End Sub
 

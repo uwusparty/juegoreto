@@ -24,8 +24,8 @@ Partial Class Login
     Private Sub InitializeComponent()
         Me.lblUser = New System.Windows.Forms.Label()
         Me.lblContraseña = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtUser = New System.Windows.Forms.TextBox()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnEnviar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -53,20 +53,20 @@ Partial Class Login
         Me.lblContraseña.Text = "Contraseña:"
         Me.lblContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TextBox1
+        'txtPassword
         '
-        Me.TextBox1.Location = New System.Drawing.Point(237, 105)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox1.Size = New System.Drawing.Size(222, 23)
-        Me.TextBox1.TabIndex = 2
+        Me.txtPassword.Location = New System.Drawing.Point(237, 105)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(222, 23)
+        Me.txtPassword.TabIndex = 2
         '
-        'TextBox2
+        'txtUser
         '
-        Me.TextBox2.Location = New System.Drawing.Point(237, 56)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(222, 23)
-        Me.TextBox2.TabIndex = 1
+        Me.txtUser.Location = New System.Drawing.Point(237, 56)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(222, 23)
+        Me.txtUser.TabIndex = 1
         '
         'btnSalir
         '
@@ -118,8 +118,8 @@ Partial Class Login
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnEnviar)
         Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtUser)
+        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.lblContraseña)
         Me.Controls.Add(Me.lblUser)
         Me.Name = "Login"
@@ -134,9 +134,10 @@ Partial Class Login
     Friend WithEvents lblUser As Label
     Friend WithEvents lblContraseña As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtUser As TextBox
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnEnviar As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents txtPassword As TextBox
 End Class
