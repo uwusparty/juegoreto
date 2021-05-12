@@ -32,6 +32,7 @@ Partial Class Juego
         Me.btnRespuesta3 = New System.Windows.Forms.Button()
         Me.btnRespuesta4 = New System.Windows.Forms.Button()
         Me.btnVolver = New System.Windows.Forms.Button()
+        Me.lblContador = New System.Windows.Forms.Label()
         CType(Me.picFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -108,11 +109,21 @@ Partial Class Juego
         Me.btnVolver.UseVisualStyleBackColor = True
         Me.btnVolver.Visible = False
         '
+        'lblContador
+        '
+        Me.lblContador.AutoSize = True
+        Me.lblContador.Location = New System.Drawing.Point(721, 28)
+        Me.lblContador.Name = "lblContador"
+        Me.lblContador.Size = New System.Drawing.Size(41, 15)
+        Me.lblContador.TabIndex = 10
+        Me.lblContador.Text = "Label1"
+        '
         'Juego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(797, 538)
+        Me.Controls.Add(Me.lblContador)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.picFoto)
         Me.Controls.Add(Me.btnRespuesta4)
@@ -125,6 +136,7 @@ Partial Class Juego
         Me.Text = "TRIVIALMI"
         CType(Me.picFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -136,4 +148,5 @@ Partial Class Juego
     Friend WithEvents btnRespuesta3 As Button
     Friend WithEvents btnRespuesta4 As Button
     Friend WithEvents btnVolver As Button
+    Friend WithEvents lblContador As Label
 End Class
