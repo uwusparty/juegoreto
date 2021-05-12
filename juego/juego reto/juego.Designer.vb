@@ -120,8 +120,9 @@ Partial Class Juego
         Me.Controls.Add(Me.btnRespuesta2)
         Me.Controls.Add(Me.lblPregunta)
         Me.Controls.Add(Me.btnRespuesta1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Juego"
-        Me.Text = "juego"
+        Me.Text = "TRIVIALMI"
         CType(Me.picFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

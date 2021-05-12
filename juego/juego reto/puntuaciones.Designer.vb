@@ -31,11 +31,12 @@ Partial Class puntuaciones
         'lblUsuario
         '
         Me.lblUsuario.AutoSize = True
-        Me.lblUsuario.Location = New System.Drawing.Point(112, 32)
+        Me.lblUsuario.Font = New System.Drawing.Font("Snap ITC", 14.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
+        Me.lblUsuario.Location = New System.Drawing.Point(85, 23)
         Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(41, 15)
+        Me.lblUsuario.Size = New System.Drawing.Size(226, 25)
         Me.lblUsuario.TabIndex = 0
-        Me.lblUsuario.Text = "Label1"
+        Me.lblUsuario.Text = "LISTA DE AMIGOS"
         '
         'lstPuntuaciones
         '
@@ -68,7 +69,7 @@ Partial Class puntuaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Plum
+        Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(395, 528)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnMenu)
