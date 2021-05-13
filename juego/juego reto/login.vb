@@ -34,7 +34,6 @@ Public Class Login
             Dim dr As MySqlDataReader
             daCli = New MySqlDataAdapter()
             cmd = New MySqlCommand("select id_user from users where username=? and password=? ", cn)
-            MessageBox.Show(cmd.ToString)
             cmd.Parameters.Add(New MySqlParameter("username", txtUser.Text()))
             cmd.Parameters.Add(New MySqlParameter("password", txtPassword.Text()))
             cmd.CommandType = CommandType.Text
@@ -43,10 +42,12 @@ Public Class Login
                 If (dr.HasRows) Then
                     dr.Read()
                     menu.user = dr.GetInt32("id_user")
+                    menu.username = txtUser.Text
                     menu.Show()
                     Me.Close()
                     menu.isLogin = True
                     menu.btnLogin.Text = "CERRAR SESION"
+                    cn.Close()
                 Else
                     MessageBox.Show("USUARIO NO EXISTENTE")
                 End If
@@ -54,6 +55,5 @@ Public Class Login
                 MessageBox.Show(ex.Message)
             End Try
         End If
-        cn.Close()
     End Sub
 End Class

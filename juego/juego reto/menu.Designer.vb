@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class menu
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class menu
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(menu))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -34,13 +34,11 @@ Partial Class menu
         Me.lblMensaje = New System.Windows.Forms.Label()
         Me.btnAmigos = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -150,7 +148,7 @@ Partial Class menu
         '
         Me.btnAmigos.BackColor = System.Drawing.Color.Gainsboro
         Me.btnAmigos.Font = New System.Drawing.Font("Showcard Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnAmigos.Location = New System.Drawing.Point(74, 523)
+        Me.btnAmigos.Location = New System.Drawing.Point(97, 526)
         Me.btnAmigos.Name = "btnAmigos"
         Me.btnAmigos.Size = New System.Drawing.Size(91, 29)
         Me.btnAmigos.TabIndex = 5
@@ -168,24 +166,12 @@ Partial Class menu
         Me.PictureBox5.TabIndex = 10
         Me.PictureBox5.TabStop = False
         '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.InitialImage = CType(resources.GetObject("PictureBox6.InitialImage"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(171, 513)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(55, 50)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 11
-        Me.PictureBox6.TabStop = False
-        '
         'menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(541, 598)
-        Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.btnAmigos)
         Me.Controls.Add(Me.lblMensaje)
@@ -205,7 +191,6 @@ Partial Class menu
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -222,5 +207,4 @@ Partial Class menu
     Friend WithEvents lblMensaje As Label
     Friend WithEvents btnAmigos As Button
     Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox6 As PictureBox
 End Class

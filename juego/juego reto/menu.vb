@@ -3,6 +3,7 @@
     Public isLogin As Boolean = False
     Public formAmigos As amigos
     Public user As Integer = -1
+    Public username As String
     Private Sub menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         btnJugar.BackColor = Color.FromArgb(3, 169, 244)
         btnLogin.BackColor = Color.FromArgb(57, 226, 57)
@@ -70,7 +71,7 @@
     End Sub
 
     Private Sub btnAmigos_Click(sender As Object, e As EventArgs) Handles btnAmigos.Click
-        If isLogin = False Then
+        If isLogin = True Then
             If formAmigos Is Nothing Then
                 formAmigos = New amigos(Me)
             End If
