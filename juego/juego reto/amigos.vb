@@ -45,9 +45,10 @@ Public Class amigos
         cmd.Parameters.Add(New MySqlParameter("id_sender", menu.user))
         cmd.Parameters.Add(New MySqlParameter("username", lstAmigos.SelectedItem))
         cmd.Parameters.Add(New MySqlParameter("id_receiver", menu.user))
+        cmd.Parameters.Add(New MySqlParameter("username1", lstAmigos.SelectedItem))
         Try
             cmd.ExecuteNonQuery()
-            'lstAmigos.Items.Remove(lstAmigos.SelectedItem)
+            lstAmigos.Items.Remove(lstAmigos.SelectedItem)
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
