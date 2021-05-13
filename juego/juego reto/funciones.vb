@@ -3,11 +3,9 @@ Module FuncionesBD
     Dim cn As MySqlConnection
 
     Public Function conectar() As MySqlConnection
-        Dim conexion As New MySqlConnection("Server=192.168.6.61;user id=almi;password=Almi123;database=trivialmi")
+        Dim conexion As New MySqlConnection("Server=192.168.6.218;user id=almi;password=Almi123;database=trivialmi")
         Try
-            'Dim cn As String = "Server=192.168.6.61;user id=almi;password=Almi123;database=trivialmi"
-            conexion.Open() 'PARA ABRIR LA BASE DE DATOS
-            'conexion.Close() PARA CERRAR LA BASE DE DATOS
+            conexion.Open()
             Return conexion
         Catch ex As Exception
             MessageBox.Show(ex.Message)

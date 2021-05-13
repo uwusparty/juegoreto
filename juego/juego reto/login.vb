@@ -5,10 +5,6 @@ Public Class Login
     Private daCli As MySqlDataAdapter
     Private dsCli As DataSet
     Public menu As menu
-    Private Sub lblUser_Click(sender As Object, e As EventArgs) Handles lblUser.Click
-
-    End Sub
-
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         menu.Show()
         Me.Close()
@@ -18,7 +14,7 @@ Public Class Login
         If cn Is Nothing Then
             Return
         End If
-        If menu.esIngles = True Then
+        If menu.idioma = "en" Then
             lblUser.Text = "User Name/Email:"
             lblContraseña.Text = "Password:"
             btnEnviar.Text = "Send"
@@ -38,6 +34,7 @@ Public Class Login
             Dim dr As MySqlDataReader
             daCli = New MySqlDataAdapter()
             cmd = New MySqlCommand("select id_user from users where username=? and password=? ", cn)
+            MessageBox.Show(cmd.ToString)
             cmd.Parameters.Add(New MySqlParameter("username", txtUser.Text()))
             cmd.Parameters.Add(New MySqlParameter("password", txtPassword.Text()))
             cmd.CommandType = CommandType.Text

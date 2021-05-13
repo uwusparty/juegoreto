@@ -1,5 +1,5 @@
 ﻿Public Class menu
-    Public esIngles As Boolean
+    Public idioma As String = "es"
     Public isLogin As Boolean = False
     Public formAmigos As amigos
     Public user As Integer = -1
@@ -33,17 +33,11 @@
         'If isLogin = False Then
         'lblMensaje.Show()
         'Else
-        If btnIdioma.Text = "ESPAÑOL" Then
-                Dim juego As New Juego
-                juego.Show()
-                Me.Hide()
-            Else
-                Dim categoria As New categoria
-                categoria.menu = Me
-                categoria.Show()
-                Me.Hide()
-            End If
-        'End If
+        Dim categoria As New categoria
+        categoria.menu = Me
+        categoria.Show()
+        Me.Hide()
+
     End Sub
 
     Private Sub btnIdioma_Click(sender As Object, e As EventArgs) Handles btnIdioma.Click
@@ -51,7 +45,7 @@
             btnJugar.Text = "PLAY"
             btnIdioma.Text = "CHANGE TO SPANISH"
             btnSalir.Text = "EXIT"
-            esIngles = True
+            idioma = "en"
             If isLogin = False Then
                 btnLogin.Text = "LOGIN"
             Else
@@ -62,7 +56,7 @@
             btnLogin.Text = "INICIAR SESIÓN"
             btnIdioma.Text = "CAMBIAR A INGLES"
             btnSalir.Text = "SALIR"
-            esIngles = False
+            idioma = "es"
             If isLogin = False Then
                 btnLogin.Text = "INICIAR SESION"
             Else
@@ -76,13 +70,15 @@
     End Sub
 
     Private Sub btnAmigos_Click(sender As Object, e As EventArgs) Handles btnAmigos.Click
-        If formAmigos Is Nothing Then
-            formAmigos = New amigos(Me)
-        End If
-        If formAmigos.Visible Then
-            formAmigos.Visible = False
-        Else
-            formAmigos.Visible = True
+        If isLogin = False Then
+            If formAmigos Is Nothing Then
+                formAmigos = New amigos(Me)
+            End If
+            If formAmigos.Visible Then
+                formAmigos.Visible = False
+            Else
+                formAmigos.Visible = True
+            End If
         End If
     End Sub
 End Class

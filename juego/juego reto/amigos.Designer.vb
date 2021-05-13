@@ -69,7 +69,7 @@ Partial Class amigos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Plum
-        Me.ClientSize = New System.Drawing.Size(238, 434)
+        Me.ClientSize = New System.Drawing.Size(239, 437)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnBorrar)

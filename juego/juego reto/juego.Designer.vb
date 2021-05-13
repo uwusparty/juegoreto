@@ -38,7 +38,6 @@ Partial Class Juego
         '
         'picFoto
         '
-        Me.picFoto.Image = CType(resources.GetObject("picFoto.Image"), System.Drawing.Image)
         Me.picFoto.Location = New System.Drawing.Point(135, 28)
         Me.picFoto.Name = "picFoto"
         Me.picFoto.Size = New System.Drawing.Size(516, 457)
