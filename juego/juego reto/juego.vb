@@ -5,9 +5,9 @@ Imports System.IO
 
 Public Class Juego
     Dim contador As Integer
+    Dim contpregunta As Integer
     Dim preguntas As Integer
     Dim puntuacion As Integer
-    Dim puntuaciones As puntuaciones
     Dim n As WebClient = New WebClient()
     Public arrayPreg As List(Of String) = New List(Of String)
     Dim posicion As Integer = 0
@@ -17,11 +17,10 @@ Public Class Juego
     Dim respuestaCorrecta As String
     Public idioma As String
     Public categoria As String
-    Public eleccion As Integer
+    Public menu As menu
 
     Public Function getPreguntas() As List(Of String)
-        'getCategoria()
-        Dim json = n.DownloadString("http://192.168.6.218:8080/trivialmi/questions/") '& categoria)
+        Dim json = n.DownloadString("http://192.168.6.218:8080/trivialmi/questions/" & categoria)
         Dim read = Linq.JObject.Parse(json)
         Dim arrayPreguntas As List(Of String) = New List(Of String)
         For i As Integer = 0 To read.Item("data").Count - 1
@@ -29,15 +28,21 @@ Public Class Juego
         Next
         Return arrayPreguntas
     End Function
-    Public Sub getCategoria()
-        Dim json = n.DownloadString("http://192.168.6.218:8080/trivialmi/category")
-        Dim read = Linq.JObject.Parse(json)
-        categoria = read.Item("data")(eleccion).ToString
-    End Sub
+    'Public Sub eleccionpreguntas()
+    '    Dim read = Linq.JObject.Parse(guardarPreguntas.Item(numRandom))
+    '    Dim json = n.UploadData("http://192.168.6.218:8080/trivialmi/questions/" & read.Item("_id"))
+    '    Dim arrayPreguntas As List(Of String) = New List(Of String)
+
+    'End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles timerImagen.Tick
-        lblContador.Text = contador
-        If preguntas < 10 Then
+        If preguntas < 2 Then
             If contador = 0 Then
+                lblPregunta.Hide()
+                btnRespuesta1.Hide()
+                btnRespuesta2.Hide()
+                btnRespuesta3.Hide()
+                btnRespuesta4.Hide()
+                picFoto.Show()
                 btnRespuesta1.BackColor = DefaultBackColor
                 btnRespuesta2.BackColor = DefaultBackColor
                 btnRespuesta3.BackColor = DefaultBackColor
@@ -66,6 +71,8 @@ Public Class Juego
                 contador += 1
                 guardarPreguntas.RemoveAt(numRandom)
             ElseIf contador = 5 Then
+                lblContador.Visible = True
+                contpregunta = 15
                 picFoto.Hide()
                 lblPregunta.Show()
                 btnRespuesta1.Show()
@@ -73,20 +80,33 @@ Public Class Juego
                 btnRespuesta3.Show()
                 btnRespuesta4.Show()
                 contador += 1
+            ElseIf contador = 20 Then
+                If respuestaCorrecta = btnRespuesta1.Text Then
+                    btnRespuesta1.BackColor = Color.Green
+                ElseIf respuestaCorrecta = btnRespuesta2.Text Then
+                    btnRespuesta2.BackColor = Color.Green
+                ElseIf respuestaCorrecta = btnRespuesta3.Text Then
+                    btnRespuesta3.BackColor = Color.Green
+                ElseIf respuestaCorrecta = btnRespuesta4.Text Then
+                    btnRespuesta4.BackColor = Color.Green
+                End If
+                lblContador.Visible = False
+                contador += 1
             ElseIf contador = 25 Then
                 contador = 0
-                picFoto.Show()
-                lblPregunta.Hide()
-                btnRespuesta1.Hide()
-                btnRespuesta2.Hide()
-                btnRespuesta3.Hide()
-                btnRespuesta4.Hide()
                 preguntas += 1
             Else
                 contador += 1
             End If
+            lblContador.Text = contpregunta
+            contpregunta -= 1
+
         Else
+            Dim puntuaciones As New Puntuaciones
+            puntuaciones.menu = menu
+            puntuaciones.puntuacion = Me.puntuacion
             puntuaciones.Show()
+            Me.Close()
         End If
     End Sub
 
@@ -94,6 +114,9 @@ Public Class Juego
         timerImagen.Start()
         guardarPreguntas = getPreguntas()
         Randomize()
+        If idioma = "en" Then
+            btnVolver.Text = "<<BACK"
+        End If
     End Sub
 
     Private Sub btnRespuesta1_Click(sender As Object, e As EventArgs) Handles btnRespuesta1.Click
@@ -101,6 +124,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta1.Text Then
                 btnRespuesta1.BackColor = Color.Green
+                puntuacion += 100
             Else
                 btnRespuesta1.BackColor = Color.Red
                 If respuestaCorrecta = btnRespuesta2.Text Then
@@ -119,6 +143,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta2.Text Then
                 btnRespuesta2.BackColor = Color.Green
+                puntuacion += 100
             Else
                 btnRespuesta2.BackColor = Color.Red
                 If respuestaCorrecta = btnRespuesta1.Text Then
@@ -136,6 +161,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta3.Text Then
                 btnRespuesta3.BackColor = Color.Green
+                puntuacion += 100
             Else
                 btnRespuesta3.BackColor = Color.Red
                 If respuestaCorrecta = btnRespuesta1.Text Then
@@ -153,6 +179,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta4.Text Then
                 btnRespuesta4.BackColor = Color.Green
+                puntuacion += 100
             Else
                 btnRespuesta4.BackColor = Color.Red
                 If respuestaCorrecta = btnRespuesta1.Text Then
@@ -166,4 +193,8 @@ Public Class Juego
         End If
     End Sub
 
+    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
+        Me.Close()
+        menu.Show()
+    End Sub
 End Class

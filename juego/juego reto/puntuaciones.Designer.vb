@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class puntuaciones
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class Puntuaciones
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,36 +20,28 @@ Partial Class puntuaciones
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.lblUsuario = New System.Windows.Forms.Label()
-        Me.lstPuntuaciones = New System.Windows.Forms.ListBox()
+        Me.lstPuntuacion = New System.Windows.Forms.ListBox()
         Me.btnMenu = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.txtPuntuacion = New System.Windows.Forms.TextBox()
+        Me.lblPuntuacion = New System.Windows.Forms.Label()
+        Me.lblTop10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'lblUsuario
+        'lstPuntuacion
         '
-        Me.lblUsuario.AutoSize = True
-        Me.lblUsuario.Font = New System.Drawing.Font("Snap ITC", 14.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
-        Me.lblUsuario.Location = New System.Drawing.Point(85, 23)
-        Me.lblUsuario.Name = "lblUsuario"
-        Me.lblUsuario.Size = New System.Drawing.Size(226, 25)
-        Me.lblUsuario.TabIndex = 0
-        Me.lblUsuario.Text = "LISTA DE AMIGOS"
-        '
-        'lstPuntuaciones
-        '
-        Me.lstPuntuaciones.FormattingEnabled = True
-        Me.lstPuntuaciones.ItemHeight = 15
-        Me.lstPuntuaciones.Location = New System.Drawing.Point(112, 62)
-        Me.lstPuntuaciones.Name = "lstPuntuaciones"
-        Me.lstPuntuaciones.Size = New System.Drawing.Size(168, 319)
-        Me.lstPuntuaciones.TabIndex = 1
+        Me.lstPuntuacion.FormattingEnabled = True
+        Me.lstPuntuacion.ItemHeight = 15
+        Me.lstPuntuacion.Location = New System.Drawing.Point(105, 161)
+        Me.lstPuntuacion.Name = "lstPuntuacion"
+        Me.lstPuntuacion.Size = New System.Drawing.Size(168, 154)
+        Me.lstPuntuacion.TabIndex = 1
         '
         'btnMenu
         '
-        Me.btnMenu.Location = New System.Drawing.Point(64, 415)
+        Me.btnMenu.Location = New System.Drawing.Point(60, 353)
         Me.btnMenu.Name = "btnMenu"
         Me.btnMenu.Size = New System.Drawing.Size(116, 56)
         Me.btnMenu.TabIndex = 2
@@ -58,32 +50,64 @@ Partial Class puntuaciones
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(208, 415)
+        Me.btnSalir.Location = New System.Drawing.Point(205, 353)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(116, 56)
         Me.btnSalir.TabIndex = 3
         Me.btnSalir.Text = "SALIR"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
-        'puntuaciones
+        'txtPuntuacion
+        '
+        Me.txtPuntuacion.Location = New System.Drawing.Point(105, 73)
+        Me.txtPuntuacion.Name = "txtPuntuacion"
+        Me.txtPuntuacion.ReadOnly = True
+        Me.txtPuntuacion.Size = New System.Drawing.Size(168, 23)
+        Me.txtPuntuacion.TabIndex = 4
+        '
+        'lblPuntuacion
+        '
+        Me.lblPuntuacion.AutoSize = True
+        Me.lblPuntuacion.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblPuntuacion.Location = New System.Drawing.Point(105, 41)
+        Me.lblPuntuacion.Name = "lblPuntuacion"
+        Me.lblPuntuacion.Size = New System.Drawing.Size(157, 25)
+        Me.lblPuntuacion.TabIndex = 5
+        Me.lblPuntuacion.Text = "Puntuacion Final:"
+        '
+        'lblTop10
+        '
+        Me.lblTop10.AutoSize = True
+        Me.lblTop10.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblTop10.Location = New System.Drawing.Point(60, 133)
+        Me.lblTop10.Name = "lblTop10"
+        Me.lblTop10.Size = New System.Drawing.Size(261, 25)
+        Me.lblTop10.TabIndex = 6
+        Me.lblTop10.Text = "Sus 10 mejores puntuaciones:"
+        '
+        'Puntuaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
-        Me.ClientSize = New System.Drawing.Size(395, 528)
+        Me.ClientSize = New System.Drawing.Size(380, 454)
+        Me.Controls.Add(Me.lblTop10)
+        Me.Controls.Add(Me.lblPuntuacion)
+        Me.Controls.Add(Me.txtPuntuacion)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnMenu)
-        Me.Controls.Add(Me.lstPuntuaciones)
-        Me.Controls.Add(Me.lblUsuario)
-        Me.Name = "puntuaciones"
+        Me.Controls.Add(Me.lstPuntuacion)
+        Me.Name = "Puntuaciones"
         Me.Text = "puntuaciones"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents lblUsuario As Label
     Friend WithEvents lstPuntuaciones As ListBox
     Friend WithEvents btnMenu As Button
     Friend WithEvents btnSalir As Button
+    Friend WithEvents lstPuntuacion As ListBox
+    Friend WithEvents txtPuntuacion As TextBox
+    Friend WithEvents lblPuntuacion As Label
+    Friend WithEvents lblTop10 As Label
 End Class

@@ -38,7 +38,7 @@ Partial Class Juego
         '
         'picFoto
         '
-        Me.picFoto.Location = New System.Drawing.Point(135, 28)
+        Me.picFoto.Location = New System.Drawing.Point(132, 40)
         Me.picFoto.Name = "picFoto"
         Me.picFoto.Size = New System.Drawing.Size(516, 457)
         Me.picFoto.TabIndex = 0
@@ -60,9 +60,9 @@ Partial Class Juego
         '
         'lblPregunta
         '
-        Me.lblPregunta.Location = New System.Drawing.Point(257, 101)
+        Me.lblPregunta.Location = New System.Drawing.Point(97, 52)
         Me.lblPregunta.Name = "lblPregunta"
-        Me.lblPregunta.Size = New System.Drawing.Size(283, 33)
+        Me.lblPregunta.Size = New System.Drawing.Size(593, 120)
         Me.lblPregunta.TabIndex = 5
         Me.lblPregunta.Text = "Pregunta"
         Me.lblPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -102,11 +102,10 @@ Partial Class Juego
         '
         Me.btnVolver.Location = New System.Drawing.Point(12, 12)
         Me.btnVolver.Name = "btnVolver"
-        Me.btnVolver.Size = New System.Drawing.Size(54, 27)
+        Me.btnVolver.Size = New System.Drawing.Size(75, 27)
         Me.btnVolver.TabIndex = 9
-        Me.btnVolver.Text = "Button1"
+        Me.btnVolver.Text = "<<ATRAS"
         Me.btnVolver.UseVisualStyleBackColor = True
-        Me.btnVolver.Visible = False
         '
         'lblContador
         '
@@ -116,6 +115,7 @@ Partial Class Juego
         Me.lblContador.Size = New System.Drawing.Size(41, 15)
         Me.lblContador.TabIndex = 10
         Me.lblContador.Text = "Label1"
+        Me.lblContador.Visible = False
         '
         'Juego
         '

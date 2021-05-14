@@ -23,7 +23,7 @@ Partial Class categoria
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnCategoria1 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCategorias = New System.Windows.Forms.Label()
         Me.btnCategoria2 = New System.Windows.Forms.Button()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.btnCategoria3 = New System.Windows.Forms.Button()
@@ -40,18 +40,18 @@ Partial Class categoria
         Me.btnCategoria1.Name = "btnCategoria1"
         Me.btnCategoria1.Size = New System.Drawing.Size(142, 34)
         Me.btnCategoria1.TabIndex = 0
-        Me.btnCategoria1.Text = "categoria1"
+        Me.btnCategoria1.Text = "Historia"
         Me.btnCategoria1.UseVisualStyleBackColor = False
         '
-        'Label1
+        'lblCategorias
         '
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(104, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(313, 40)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "CATEGORIAS:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblCategorias.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblCategorias.Location = New System.Drawing.Point(104, 33)
+        Me.lblCategorias.Name = "lblCategorias"
+        Me.lblCategorias.Size = New System.Drawing.Size(313, 40)
+        Me.lblCategorias.TabIndex = 1
+        Me.lblCategorias.Text = "CATEGORIAS:"
+        Me.lblCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnCategoria2
         '
@@ -60,7 +60,7 @@ Partial Class categoria
         Me.btnCategoria2.Name = "btnCategoria2"
         Me.btnCategoria2.Size = New System.Drawing.Size(142, 34)
         Me.btnCategoria2.TabIndex = 2
-        Me.btnCategoria2.Text = "categoria2"
+        Me.btnCategoria2.Text = "Celebridades"
         Me.btnCategoria2.UseVisualStyleBackColor = False
         '
         'btnAtras
@@ -79,7 +79,7 @@ Partial Class categoria
         Me.btnCategoria3.Name = "btnCategoria3"
         Me.btnCategoria3.Size = New System.Drawing.Size(142, 34)
         Me.btnCategoria3.TabIndex = 9
-        Me.btnCategoria3.Text = "categoria3"
+        Me.btnCategoria3.Text = "Entretenimiento"
         Me.btnCategoria3.UseVisualStyleBackColor = False
         '
         'btnCategoria4
@@ -89,7 +89,7 @@ Partial Class categoria
         Me.btnCategoria4.Name = "btnCategoria4"
         Me.btnCategoria4.Size = New System.Drawing.Size(142, 34)
         Me.btnCategoria4.TabIndex = 10
-        Me.btnCategoria4.Text = "categoria4"
+        Me.btnCategoria4.Text = "Ciencia"
         Me.btnCategoria4.UseVisualStyleBackColor = False
         '
         'btnCategoria5
@@ -99,7 +99,7 @@ Partial Class categoria
         Me.btnCategoria5.Name = "btnCategoria5"
         Me.btnCategoria5.Size = New System.Drawing.Size(142, 34)
         Me.btnCategoria5.TabIndex = 11
-        Me.btnCategoria5.Text = "categoria5"
+        Me.btnCategoria5.Text = "Deportes"
         Me.btnCategoria5.UseVisualStyleBackColor = False
         '
         'btnCategoria6
@@ -109,7 +109,7 @@ Partial Class categoria
         Me.btnCategoria6.Name = "btnCategoria6"
         Me.btnCategoria6.Size = New System.Drawing.Size(142, 34)
         Me.btnCategoria6.TabIndex = 12
-        Me.btnCategoria6.Text = "categoria6"
+        Me.btnCategoria6.Text = "Geografia"
         Me.btnCategoria6.UseVisualStyleBackColor = False
         '
         'btnAleatorio
@@ -119,7 +119,7 @@ Partial Class categoria
         Me.btnAleatorio.Name = "btnAleatorio"
         Me.btnAleatorio.Size = New System.Drawing.Size(142, 34)
         Me.btnAleatorio.TabIndex = 13
-        Me.btnAleatorio.Text = "aleatorio"
+        Me.btnAleatorio.Text = "Aleatorio"
         Me.btnAleatorio.UseVisualStyleBackColor = False
         '
         'categoria
@@ -135,7 +135,7 @@ Partial Class categoria
         Me.Controls.Add(Me.btnCategoria3)
         Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.btnCategoria2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblCategorias)
         Me.Controls.Add(Me.btnCategoria1)
         Me.Name = "categoria"
         Me.Text = "categoria"
@@ -144,7 +144,7 @@ Partial Class categoria
     End Sub
 
     Friend WithEvents btn As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblCategorias As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents btnAtras As Button
     Friend WithEvents Button2 As Button

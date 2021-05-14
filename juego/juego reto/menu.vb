@@ -31,13 +31,14 @@
     End Sub
 
     Private Sub btnJugar_Click(sender As Object, e As EventArgs) Handles btnJugar.Click
-        'If isLogin = False Then
-        'lblMensaje.Show()
-        'Else
-        Dim categoria As New categoria
-        categoria.menu = Me
-        categoria.Show()
-        Me.Hide()
+        If isLogin = False Then
+            lblMensaje.Show()
+        Else
+            Dim categoria As New categoria
+            categoria.menu = Me
+            categoria.Show()
+            Me.Hide()
+        End If
 
     End Sub
 
