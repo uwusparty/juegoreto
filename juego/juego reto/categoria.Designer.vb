@@ -22,6 +22,7 @@ Partial Class categoria
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(categoria))
         Me.btnCategoria1 = New System.Windows.Forms.Button()
         Me.lblCategorias = New System.Windows.Forms.Label()
         Me.btnCategoria2 = New System.Windows.Forms.Button()
@@ -126,7 +127,7 @@ Partial Class categoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Plum
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(543, 357)
         Me.Controls.Add(Me.btnAleatorio)
         Me.Controls.Add(Me.btnCategoria6)
@@ -137,8 +138,9 @@ Partial Class categoria
         Me.Controls.Add(Me.btnCategoria2)
         Me.Controls.Add(Me.lblCategorias)
         Me.Controls.Add(Me.btnCategoria1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "categoria"
-        Me.Text = "categoria"
+        Me.Text = "TRIVIALMI"
         Me.ResumeLayout(False)
 
     End Sub

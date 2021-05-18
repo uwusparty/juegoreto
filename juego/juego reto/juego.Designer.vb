@@ -33,6 +33,10 @@ Partial Class Juego
         Me.btnRespuesta4 = New System.Windows.Forms.Button()
         Me.btnVolver = New System.Windows.Forms.Button()
         Me.lblContador = New System.Windows.Forms.Label()
+        Me.btnPositivo = New System.Windows.Forms.Button()
+        Me.btnNegativo = New System.Windows.Forms.Button()
+        Me.lblValorar = New System.Windows.Forms.Label()
+        Me.btnPausa = New System.Windows.Forms.Button()
         CType(Me.picFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -117,11 +121,54 @@ Partial Class Juego
         Me.lblContador.Text = "Label1"
         Me.lblContador.Visible = False
         '
+        'btnPositivo
+        '
+        Me.btnPositivo.Location = New System.Drawing.Point(674, 201)
+        Me.btnPositivo.Name = "btnPositivo"
+        Me.btnPositivo.Size = New System.Drawing.Size(43, 22)
+        Me.btnPositivo.TabIndex = 11
+        Me.btnPositivo.Text = "+"
+        Me.btnPositivo.UseVisualStyleBackColor = True
+        Me.btnPositivo.Visible = False
+        '
+        'btnNegativo
+        '
+        Me.btnNegativo.Location = New System.Drawing.Point(732, 201)
+        Me.btnNegativo.Name = "btnNegativo"
+        Me.btnNegativo.Size = New System.Drawing.Size(44, 22)
+        Me.btnNegativo.TabIndex = 12
+        Me.btnNegativo.Text = "-"
+        Me.btnNegativo.UseVisualStyleBackColor = True
+        Me.btnNegativo.Visible = False
+        '
+        'lblValorar
+        '
+        Me.lblValorar.AutoSize = True
+        Me.lblValorar.Location = New System.Drawing.Point(674, 183)
+        Me.lblValorar.Name = "lblValorar"
+        Me.lblValorar.Size = New System.Drawing.Size(102, 15)
+        Me.lblValorar.TabIndex = 13
+        Me.lblValorar.Text = "Valora la pregunta"
+        Me.lblValorar.Visible = False
+        '
+        'btnPausa
+        '
+        Me.btnPausa.Location = New System.Drawing.Point(12, 84)
+        Me.btnPausa.Name = "btnPausa"
+        Me.btnPausa.Size = New System.Drawing.Size(75, 23)
+        Me.btnPausa.TabIndex = 14
+        Me.btnPausa.Text = "Pausa"
+        Me.btnPausa.UseVisualStyleBackColor = True
+        '
         'Juego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(797, 538)
+        Me.Controls.Add(Me.btnPausa)
+        Me.Controls.Add(Me.lblValorar)
+        Me.Controls.Add(Me.btnNegativo)
+        Me.Controls.Add(Me.btnPositivo)
         Me.Controls.Add(Me.lblContador)
         Me.Controls.Add(Me.btnVolver)
         Me.Controls.Add(Me.picFoto)
@@ -148,4 +195,8 @@ Partial Class Juego
     Friend WithEvents btnRespuesta4 As Button
     Friend WithEvents btnVolver As Button
     Friend WithEvents lblContador As Label
+    Friend WithEvents btnPositivo As Button
+    Friend WithEvents btnNegativo As Button
+    Friend WithEvents lblValorar As Label
+    Friend WithEvents btnPausa As Button
 End Class

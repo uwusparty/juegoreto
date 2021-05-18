@@ -22,6 +22,7 @@ Partial Class Puntuaciones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Puntuaciones))
         Me.lstPuntuacion = New System.Windows.Forms.ListBox()
         Me.btnMenu = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
@@ -97,8 +98,9 @@ Partial Class Puntuaciones
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnMenu)
         Me.Controls.Add(Me.lstPuntuacion)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Puntuaciones"
-        Me.Text = "puntuaciones"
+        Me.Text = "TRIVIALMI"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
