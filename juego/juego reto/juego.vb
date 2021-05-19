@@ -29,9 +29,15 @@ Public Class Juego
         Next
         Return arrayPreguntas
     End Function
+    Public Sub updatepreguntas()
+
+    End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles timerImagen.Tick
         If preguntas < 10 Then
             If contador = 0 Then
+                btnPositivo.Visible = False
+                btnNegativo.Visible = False
+                lblValorar.Visible = False
                 acierto = False
                 lblPregunta.Hide()
                 btnRespuesta1.Hide()
@@ -45,7 +51,7 @@ Public Class Juego
                 btnRespuesta4.BackColor = DefaultBackColor
                 numRandom = CInt(Int((guardarPreguntas.Count * Rnd()) + 0))
                 Dim read = Linq.JObject.Parse(guardarPreguntas.Item(numRandom))
-                Dim tImage As Bitmap = Bitmap.FromStream(New MemoryStream(n.DownloadData("https://s1.1zoom.me/big3/471/Painting_Art_Back_view_Photographer_575380_3840x2400.jpg")))
+                Dim tImage As Bitmap = Bitmap.FromStream(New MemoryStream(n.DownloadData("file://///192.168.6.216/juego/categorias/" & read.Item("image_url").ToString)))
                 picFoto.Image = tImage
                 lblPregunta.Text = read.Item("question")(idioma).ToString
                 arrayRespuestas(0) = read.Item("correct")(idioma).ToString
@@ -65,7 +71,6 @@ Public Class Juego
                 btnRespuesta3.Text = arrayRespuestas(2)
                 btnRespuesta4.Text = arrayRespuestas(3)
                 contador += 1
-                guardarPreguntas.RemoveAt(numRandom)
             ElseIf contador = 5 Then
                 lblContador.Visible = True
                 contpregunta = 15
@@ -77,6 +82,9 @@ Public Class Juego
                 btnRespuesta4.Show()
                 contador += 1
             ElseIf contador = 20 Then
+                btnPositivo.Visible = True
+                btnNegativo.Visible = True
+                lblValorar.Visible = True
                 If acierto = False Then
                     If respuestaCorrecta = btnRespuesta1.Text Then
                         btnRespuesta1.BackColor = Color.YellowGreen
@@ -93,6 +101,7 @@ Public Class Juego
             ElseIf contador = 25 Then
                 contador = 0
                 preguntas += 1
+                guardarPreguntas.RemoveAt(numRandom)
             Else
                 contador += 1
             End If
@@ -188,5 +197,9 @@ Public Class Juego
                 btnPausa.Text = "Pausa"
             End If
         End If
+    End Sub
+
+    Private Sub btnPositivo_Click(sender As Object, e As EventArgs) Handles btnPositivo.Click
+
     End Sub
 End Class

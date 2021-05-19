@@ -45,6 +45,7 @@ Partial Class Juego
         Me.picFoto.Location = New System.Drawing.Point(132, 40)
         Me.picFoto.Name = "picFoto"
         Me.picFoto.Size = New System.Drawing.Size(516, 457)
+        Me.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picFoto.TabIndex = 0
         Me.picFoto.TabStop = False
         '
