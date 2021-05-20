@@ -68,8 +68,8 @@ Partial Class amigos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Plum
-        Me.ClientSize = New System.Drawing.Size(239, 437)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(235, 433)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnBorrar)
@@ -77,9 +77,12 @@ Partial Class amigos
         Me.Controls.Add(Me.lstAmigos)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(251, 472)
         Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(251, 472)
         Me.Name = "amigos"
         Me.ShowIcon = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Trivialmi"
         Me.TopMost = True
         Me.ResumeLayout(False)

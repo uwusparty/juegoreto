@@ -35,48 +35,56 @@ Partial Class menu
         '
         'btnJugar
         '
-        Me.btnJugar.BackColor = System.Drawing.Color.Transparent
+        Me.btnJugar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnJugar.FlatAppearance.BorderSize = 0
         Me.btnJugar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnJugar.Location = New System.Drawing.Point(74, 153)
+        Me.btnJugar.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnJugar.ForeColor = System.Drawing.Color.White
+        Me.btnJugar.Location = New System.Drawing.Point(97, 163)
         Me.btnJugar.Name = "btnJugar"
-        Me.btnJugar.Size = New System.Drawing.Size(134, 71)
+        Me.btnJugar.Size = New System.Drawing.Size(342, 71)
         Me.btnJugar.TabIndex = 1
         Me.btnJugar.Text = "JUGAR"
         Me.btnJugar.UseVisualStyleBackColor = False
         '
         'btnLogin
         '
-        Me.btnLogin.BackColor = System.Drawing.Color.Transparent
+        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnLogin.FlatAppearance.BorderSize = 0
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.Location = New System.Drawing.Point(339, 246)
+        Me.btnLogin.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnLogin.ForeColor = System.Drawing.Color.White
+        Me.btnLogin.Location = New System.Drawing.Point(97, 240)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(140, 71)
+        Me.btnLogin.Size = New System.Drawing.Size(342, 71)
         Me.btnLogin.TabIndex = 2
         Me.btnLogin.Text = "INICIAR SESIÓN"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
         'btnIdioma
         '
-        Me.btnIdioma.BackColor = System.Drawing.Color.Transparent
+        Me.btnIdioma.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnIdioma.FlatAppearance.BorderSize = 0
         Me.btnIdioma.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnIdioma.Location = New System.Drawing.Point(74, 350)
+        Me.btnIdioma.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnIdioma.ForeColor = System.Drawing.Color.White
+        Me.btnIdioma.Location = New System.Drawing.Point(97, 394)
         Me.btnIdioma.Name = "btnIdioma"
-        Me.btnIdioma.Size = New System.Drawing.Size(134, 71)
+        Me.btnIdioma.Size = New System.Drawing.Size(342, 71)
         Me.btnIdioma.TabIndex = 3
         Me.btnIdioma.Text = "CAMBIAR A INGLES"
         Me.btnIdioma.UseVisualStyleBackColor = False
         '
         'btnSalir
         '
-        Me.btnSalir.BackColor = System.Drawing.Color.Transparent
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnSalir.FlatAppearance.BorderSize = 0
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalir.Location = New System.Drawing.Point(339, 442)
+        Me.btnSalir.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
+        Me.btnSalir.Location = New System.Drawing.Point(97, 471)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(140, 71)
+        Me.btnSalir.Size = New System.Drawing.Size(342, 71)
         Me.btnSalir.TabIndex = 4
         Me.btnSalir.Text = "SALIR"
         Me.btnSalir.UseVisualStyleBackColor = False
@@ -85,7 +93,8 @@ Partial Class menu
         '
         Me.lblMensaje.AutoSize = True
         Me.lblMensaje.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblMensaje.Location = New System.Drawing.Point(227, 118)
+        Me.lblMensaje.ForeColor = System.Drawing.Color.Red
+        Me.lblMensaje.Location = New System.Drawing.Point(125, 109)
         Me.lblMensaje.Name = "lblMensaje"
         Me.lblMensaje.Size = New System.Drawing.Size(284, 40)
         Me.lblMensaje.TabIndex = 9
@@ -94,13 +103,18 @@ Partial Class menu
         '
         'btnAmigos
         '
-        Me.btnAmigos.BackColor = System.Drawing.Color.Gainsboro
-        Me.btnAmigos.Font = New System.Drawing.Font("Showcard Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.btnAmigos.Location = New System.Drawing.Point(97, 526)
+        Me.btnAmigos.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnAmigos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnAmigos.Cursor = System.Windows.Forms.Cursors.Default
+        Me.btnAmigos.FlatAppearance.BorderSize = 0
+        Me.btnAmigos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAmigos.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnAmigos.ForeColor = System.Drawing.Color.White
+        Me.btnAmigos.Location = New System.Drawing.Point(97, 317)
         Me.btnAmigos.Name = "btnAmigos"
-        Me.btnAmigos.Size = New System.Drawing.Size(91, 29)
+        Me.btnAmigos.Size = New System.Drawing.Size(342, 71)
         Me.btnAmigos.TabIndex = 5
-        Me.btnAmigos.Text = "Amigos"
+        Me.btnAmigos.Text = "AMIGOS"
         Me.btnAmigos.UseVisualStyleBackColor = False
         '
         'PictureBox5
@@ -118,8 +132,10 @@ Partial Class menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.juego_reto.My.Resources.Resources.rayas
         Me.ClientSize = New System.Drawing.Size(541, 598)
+        Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.btnAmigos)
         Me.Controls.Add(Me.lblMensaje)
@@ -127,8 +143,14 @@ Partial Class menu
         Me.Controls.Add(Me.btnIdioma)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.btnJugar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(557, 637)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(557, 637)
         Me.Name = "menu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TRIVIALMI"
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

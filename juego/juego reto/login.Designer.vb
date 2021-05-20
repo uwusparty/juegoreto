@@ -113,8 +113,9 @@ Partial Class Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(527, 268)
+        Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnEnviar)
@@ -124,7 +125,12 @@ Partial Class Login
         Me.Controls.Add(Me.lblContraseña)
         Me.Controls.Add(Me.lblUser)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(543, 307)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(543, 307)
         Me.Name = "Login"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TRIVIALMI"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

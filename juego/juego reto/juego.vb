@@ -29,14 +29,12 @@ Public Class Juego
         Next
         Return arrayPreguntas
     End Function
-    Public Sub updatepreguntas()
-
-    End Sub
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles timerImagen.Tick
         If preguntas < 10 Then
             If contador = 0 Then
+                lblNumpregunta.Text = preguntas + 1 & " / 10"
+                btnPausa.Visible = False
                 btnPositivo.Visible = False
-                btnNegativo.Visible = False
                 lblValorar.Visible = False
                 acierto = False
                 lblPregunta.Hide()
@@ -82,8 +80,8 @@ Public Class Juego
                 btnRespuesta4.Show()
                 contador += 1
             ElseIf contador = 20 Then
+                btnPausa.Visible = True
                 btnPositivo.Visible = True
-                btnNegativo.Visible = True
                 lblValorar.Visible = True
                 If acierto = False Then
                     If respuestaCorrecta = btnRespuesta1.Text Then
@@ -105,6 +103,7 @@ Public Class Juego
             Else
                 contador += 1
             End If
+            lblPuntuacion.Text = puntuacion
             lblContador.Text = contpregunta
             contpregunta -= 1
 
@@ -131,7 +130,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta1.Text Then
                 btnRespuesta1.BackColor = Color.YellowGreen
-                puntuacion += 100
+                puntuacion += 100 * contpregunta
                 acierto = True
             Else
                 btnRespuesta1.BackColor = Color.IndianRed
@@ -144,7 +143,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta2.Text Then
                 btnRespuesta2.BackColor = Color.YellowGreen
-                puntuacion += 100
+                puntuacion += 100 * contpregunta
                 acierto = True
             Else
                 btnRespuesta2.BackColor = Color.IndianRed
@@ -156,7 +155,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta3.Text Then
                 btnRespuesta3.BackColor = Color.YellowGreen
-                puntuacion += 100
+                puntuacion += 100 * contpregunta
                 acierto = True
             Else
                 btnRespuesta3.BackColor = Color.IndianRed
@@ -168,7 +167,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta4.Text Then
                 btnRespuesta4.BackColor = Color.YellowGreen
-                puntuacion += 100
+                puntuacion += 100 * contpregunta
                 acierto = True
             Else
                 btnRespuesta4.BackColor = Color.IndianRed
@@ -182,24 +181,24 @@ Public Class Juego
     End Sub
 
     Private Sub btnPausa_Click(sender As Object, e As EventArgs) Handles btnPausa.Click
-        If timerImagen.Enabled Then
-            timerImagen.Stop()
-            If idioma = "en" Then
-                btnPausa.Text = "Resume"
+        If contador >= 20 Then
+            If timerImagen.Enabled Then
+                timerImagen.Stop()
+                lblPausar.Visible = True
+                If idioma = "en" Then
+                    btnPausa.Text = "Resume"
+                Else
+                    btnPausa.Text = "Reanudar"
+                End If
             Else
-                btnPausa.Text = "Reanudar"
-            End If
-        Else
-            timerImagen.Start()
-            If idioma = "en" Then
-                btnPausa.Text = "Pause"
-            Else
-                btnPausa.Text = "Pausa"
+                timerImagen.Start()
+                lblPausar.Visible = False
+                If idioma = "en" Then
+                    btnPausa.Text = "Pause"
+                Else
+                    btnPausa.Text = "Pausa"
+                End If
             End If
         End If
-    End Sub
-
-    Private Sub btnPositivo_Click(sender As Object, e As EventArgs) Handles btnPositivo.Click
-
     End Sub
 End Class

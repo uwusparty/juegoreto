@@ -92,6 +92,7 @@ Partial Class Puntuaciones
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(380, 454)
+        Me.ControlBox = False
         Me.Controls.Add(Me.lblTop10)
         Me.Controls.Add(Me.lblPuntuacion)
         Me.Controls.Add(Me.txtPuntuacion)
@@ -99,7 +100,12 @@ Partial Class Puntuaciones
         Me.Controls.Add(Me.btnMenu)
         Me.Controls.Add(Me.lstPuntuacion)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(396, 493)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(396, 493)
         Me.Name = "Puntuaciones"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TRIVIALMI"
         Me.ResumeLayout(False)
         Me.PerformLayout()

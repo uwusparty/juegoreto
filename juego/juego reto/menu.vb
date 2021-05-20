@@ -5,10 +5,7 @@
     Public user As Integer = -1
     Public username As String
     Private Sub menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        btnJugar.BackColor = Color.FromArgb(3, 169, 244)
-        btnLogin.BackColor = Color.FromArgb(57, 226, 57)
-        btnIdioma.BackColor = Color.FromArgb(245, 74, 245)
-        btnSalir.BackColor = Color.FromArgb(241, 241, 49)
+
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
