@@ -37,35 +37,43 @@ Partial Class categoria
         'btnCategoria1
         '
         Me.btnCategoria1.BackColor = System.Drawing.Color.Peru
-        Me.btnCategoria1.Location = New System.Drawing.Point(271, 190)
+        Me.btnCategoria1.FlatAppearance.BorderSize = 0
+        Me.btnCategoria1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCategoria1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnCategoria1.Location = New System.Drawing.Point(257, 185)
         Me.btnCategoria1.Name = "btnCategoria1"
-        Me.btnCategoria1.Size = New System.Drawing.Size(142, 34)
+        Me.btnCategoria1.Size = New System.Drawing.Size(167, 46)
         Me.btnCategoria1.TabIndex = 0
         Me.btnCategoria1.Text = "Historia"
         Me.btnCategoria1.UseVisualStyleBackColor = False
         '
         'lblCategorias
         '
-        Me.lblCategorias.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblCategorias.Location = New System.Drawing.Point(100, 22)
+        Me.lblCategorias.BackColor = System.Drawing.Color.Transparent
+        Me.lblCategorias.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCategorias.Location = New System.Drawing.Point(50, 54)
         Me.lblCategorias.Name = "lblCategorias"
-        Me.lblCategorias.Size = New System.Drawing.Size(293, 40)
+        Me.lblCategorias.Size = New System.Drawing.Size(374, 40)
         Me.lblCategorias.TabIndex = 1
-        Me.lblCategorias.Text = "CATEGORIAS:"
+        Me.lblCategorias.Text = "ELIGE UNA CATEGORIA"
         Me.lblCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnCategoria2
         '
         Me.btnCategoria2.BackColor = System.Drawing.Color.Yellow
-        Me.btnCategoria2.Location = New System.Drawing.Point(64, 263)
+        Me.btnCategoria2.FlatAppearance.BorderSize = 0
+        Me.btnCategoria2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCategoria2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnCategoria2.Location = New System.Drawing.Point(50, 258)
         Me.btnCategoria2.Name = "btnCategoria2"
-        Me.btnCategoria2.Size = New System.Drawing.Size(142, 34)
+        Me.btnCategoria2.Size = New System.Drawing.Size(167, 46)
         Me.btnCategoria2.TabIndex = 2
         Me.btnCategoria2.Text = "Celebridades"
         Me.btnCategoria2.UseVisualStyleBackColor = False
         '
         'btnAtras
         '
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAtras.Location = New System.Drawing.Point(20, 22)
         Me.btnAtras.Name = "btnAtras"
         Me.btnAtras.Size = New System.Drawing.Size(78, 29)
@@ -76,9 +84,12 @@ Partial Class categoria
         'btnCategoria3
         '
         Me.btnCategoria3.BackColor = System.Drawing.Color.HotPink
-        Me.btnCategoria3.Location = New System.Drawing.Point(271, 117)
+        Me.btnCategoria3.FlatAppearance.BorderSize = 0
+        Me.btnCategoria3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCategoria3.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnCategoria3.Location = New System.Drawing.Point(257, 112)
         Me.btnCategoria3.Name = "btnCategoria3"
-        Me.btnCategoria3.Size = New System.Drawing.Size(142, 34)
+        Me.btnCategoria3.Size = New System.Drawing.Size(167, 46)
         Me.btnCategoria3.TabIndex = 9
         Me.btnCategoria3.Text = "Entretenimiento"
         Me.btnCategoria3.UseVisualStyleBackColor = False
@@ -86,9 +97,12 @@ Partial Class categoria
         'btnCategoria4
         '
         Me.btnCategoria4.BackColor = System.Drawing.Color.GreenYellow
-        Me.btnCategoria4.Location = New System.Drawing.Point(271, 263)
+        Me.btnCategoria4.FlatAppearance.BorderSize = 0
+        Me.btnCategoria4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCategoria4.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnCategoria4.Location = New System.Drawing.Point(257, 258)
         Me.btnCategoria4.Name = "btnCategoria4"
-        Me.btnCategoria4.Size = New System.Drawing.Size(142, 34)
+        Me.btnCategoria4.Size = New System.Drawing.Size(167, 46)
         Me.btnCategoria4.TabIndex = 10
         Me.btnCategoria4.Text = "Ciencia"
         Me.btnCategoria4.UseVisualStyleBackColor = False
@@ -96,9 +110,12 @@ Partial Class categoria
         'btnCategoria5
         '
         Me.btnCategoria5.BackColor = System.Drawing.Color.Tomato
-        Me.btnCategoria5.Location = New System.Drawing.Point(64, 190)
+        Me.btnCategoria5.FlatAppearance.BorderSize = 0
+        Me.btnCategoria5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCategoria5.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnCategoria5.Location = New System.Drawing.Point(50, 185)
         Me.btnCategoria5.Name = "btnCategoria5"
-        Me.btnCategoria5.Size = New System.Drawing.Size(142, 34)
+        Me.btnCategoria5.Size = New System.Drawing.Size(167, 46)
         Me.btnCategoria5.TabIndex = 11
         Me.btnCategoria5.Text = "Deportes"
         Me.btnCategoria5.UseVisualStyleBackColor = False
@@ -106,9 +123,12 @@ Partial Class categoria
         'btnCategoria6
         '
         Me.btnCategoria6.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.btnCategoria6.Location = New System.Drawing.Point(64, 117)
+        Me.btnCategoria6.FlatAppearance.BorderSize = 0
+        Me.btnCategoria6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCategoria6.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnCategoria6.Location = New System.Drawing.Point(50, 112)
         Me.btnCategoria6.Name = "btnCategoria6"
-        Me.btnCategoria6.Size = New System.Drawing.Size(142, 34)
+        Me.btnCategoria6.Size = New System.Drawing.Size(167, 46)
         Me.btnCategoria6.TabIndex = 12
         Me.btnCategoria6.Text = "Geografia"
         Me.btnCategoria6.UseVisualStyleBackColor = False
@@ -116,9 +136,12 @@ Partial Class categoria
         'btnAleatorio
         '
         Me.btnAleatorio.BackColor = System.Drawing.Color.Orange
-        Me.btnAleatorio.Location = New System.Drawing.Point(167, 334)
+        Me.btnAleatorio.FlatAppearance.BorderSize = 0
+        Me.btnAleatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAleatorio.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnAleatorio.Location = New System.Drawing.Point(153, 329)
         Me.btnAleatorio.Name = "btnAleatorio"
-        Me.btnAleatorio.Size = New System.Drawing.Size(142, 34)
+        Me.btnAleatorio.Size = New System.Drawing.Size(167, 46)
         Me.btnAleatorio.TabIndex = 13
         Me.btnAleatorio.Text = "Aleatorio"
         Me.btnAleatorio.UseVisualStyleBackColor = False
@@ -128,6 +151,7 @@ Partial Class categoria
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(481, 406)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnAleatorio)

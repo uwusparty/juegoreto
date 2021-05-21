@@ -92,9 +92,10 @@ Partial Class menu
         'lblMensaje
         '
         Me.lblMensaje.AutoSize = True
+        Me.lblMensaje.BackColor = System.Drawing.Color.Transparent
         Me.lblMensaje.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblMensaje.ForeColor = System.Drawing.Color.Red
-        Me.lblMensaje.Location = New System.Drawing.Point(125, 109)
+        Me.lblMensaje.Location = New System.Drawing.Point(132, 110)
         Me.lblMensaje.Name = "lblMensaje"
         Me.lblMensaje.Size = New System.Drawing.Size(284, 40)
         Me.lblMensaje.TabIndex = 9

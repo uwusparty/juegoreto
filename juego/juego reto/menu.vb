@@ -17,14 +17,13 @@
             Me.Hide()
         Else
             user = -1
-            If btnIdioma.Text = "CAMBIAR A INGLES" Then
+            If idioma = "es" Then
                 btnLogin.Text = "INICIAR SESION"
             Else
                 btnLogin.Text = "LOGIN"
             End If
             isLogin = False
         End If
-
     End Sub
 
     Private Sub btnJugar_Click(sender As Object, e As EventArgs) Handles btnJugar.Click
@@ -41,7 +40,9 @@
 
     Private Sub btnIdioma_Click(sender As Object, e As EventArgs) Handles btnIdioma.Click
         If btnIdioma.Text = "CAMBIAR A INGLES" Then
+            lblMensaje.Text = "User not logged in"
             btnJugar.Text = "PLAY"
+            btnAmigos.Text = "FRIENDS"
             btnIdioma.Text = "CHANGE TO SPANISH"
             btnSalir.Text = "EXIT"
             idioma = "en"
@@ -51,8 +52,9 @@
                 btnLogin.Text = "LOGOUT"
             End If
         Else
+            lblMensaje.Text = "Usuario no logueado"
             btnJugar.Text = "JUGAR"
-            btnLogin.Text = "INICIAR SESIÓN"
+            btnAmigos.Text = "AMIGOS"
             btnIdioma.Text = "CAMBIAR A INGLES"
             btnSalir.Text = "SALIR"
             idioma = "es"
@@ -78,6 +80,8 @@
             Else
                 formAmigos.Visible = True
             End If
+        Else
+            lblMensaje.Visible = True
         End If
     End Sub
 End Class

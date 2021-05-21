@@ -83,7 +83,7 @@ Partial Class amigos
         Me.Name = "amigos"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Trivialmi"
+        Me.Text = "TRIVIALMI"
         Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()

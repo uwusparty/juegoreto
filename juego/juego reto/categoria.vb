@@ -9,37 +9,37 @@
     End Sub
 
     Private Sub btnCategoria1_Click(sender As Object, e As EventArgs) Handles btnCategoria1.Click
-        juego.categoria = "History"
+        juego.categoria = "category/History"
         juego.Show()
         Me.Close()
     End Sub
 
     Private Sub btnCategoria2_Click(sender As Object, e As EventArgs) Handles btnCategoria2.Click
-        juego.categoria = "Celebrities"
+        juego.categoria = "category/Celebrities"
         juego.Show()
         Me.Close()
     End Sub
 
     Private Sub btnCategoria3_Click(sender As Object, e As EventArgs) Handles btnCategoria3.Click
-        juego.categoria = "Entertainment"
+        juego.categoria = "category/Entertainment"
         juego.Show()
         Me.Close()
     End Sub
 
     Private Sub btnCategoria4_Click(sender As Object, e As EventArgs) Handles btnCategoria4.Click
-        juego.categoria = "Science & Nature"
+        juego.categoria = "category/Science & Nature"
         juego.Show()
         Me.Close()
     End Sub
 
     Private Sub btnCategoria5_Click(sender As Object, e As EventArgs) Handles btnCategoria5.Click
-        juego.categoria = "Sports"
+        juego.categoria = "category/Sports"
         juego.Show()
         Me.Close()
     End Sub
 
     Private Sub btnCategoria6_Click(sender As Object, e As EventArgs) Handles btnCategoria6.Click
-        juego.categoria = "Geography"
+        juego.categoria = "category/Geography"
         juego.Show()
         Me.Close()
     End Sub
@@ -55,7 +55,7 @@
         juego.idioma = menu.idioma
         juego.menu = menu
         If menu.idioma = "en" Then
-            lblCategorias.Text = "Category"
+            lblCategorias.Text = "CHOOSE A CATEGORY"
             btnAtras.Text = "Back"
             btnCategoria1.Text = "History"
             btnCategoria2.Text = "Celebrities"

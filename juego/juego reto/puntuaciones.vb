@@ -2,8 +2,6 @@
 
 Public Class Puntuaciones
     Private cn As MySqlConnection
-    Private daCli As MySqlDataAdapter
-    Private dsCli As DataSet
     Public menu As menu
     Public puntuacion As Integer
     Dim contador As Integer = 1
@@ -12,7 +10,6 @@ Public Class Puntuaciones
         txtPuntuacion.Text = puntuacion
         Dim cmd As MySqlCommand
         Dim dr As MySqlDataReader
-        daCli = New MySqlDataAdapter()
         cmd = New MySqlCommand("insert into scores (id_user ,score, date) VALUES (? , ?,  ?);", cn)
         cmd.Parameters.Add(New MySqlParameter("id_user", menu.user))
         cmd.Parameters.Add(New MySqlParameter("score", puntuacion))

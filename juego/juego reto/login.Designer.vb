@@ -72,6 +72,7 @@ Partial Class Login
         'btnSalir
         '
         Me.btnSalir.BackColor = System.Drawing.Color.White
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Location = New System.Drawing.Point(361, 172)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(98, 53)
@@ -82,6 +83,7 @@ Partial Class Login
         'btnEnviar
         '
         Me.btnEnviar.BackColor = System.Drawing.Color.White
+        Me.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEnviar.Location = New System.Drawing.Point(237, 172)
         Me.btnEnviar.Name = "btnEnviar"
         Me.btnEnviar.Size = New System.Drawing.Size(98, 53)

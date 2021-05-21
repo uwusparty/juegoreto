@@ -33,16 +33,17 @@ Partial Class Puntuaciones
         '
         'lstPuntuacion
         '
+        Me.lstPuntuacion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lstPuntuacion.FormattingEnabled = True
-        Me.lstPuntuacion.ItemHeight = 15
-        Me.lstPuntuacion.Location = New System.Drawing.Point(105, 161)
+        Me.lstPuntuacion.ItemHeight = 21
+        Me.lstPuntuacion.Location = New System.Drawing.Point(104, 133)
         Me.lstPuntuacion.Name = "lstPuntuacion"
-        Me.lstPuntuacion.Size = New System.Drawing.Size(168, 154)
+        Me.lstPuntuacion.Size = New System.Drawing.Size(168, 214)
         Me.lstPuntuacion.TabIndex = 1
         '
         'btnMenu
         '
-        Me.btnMenu.Location = New System.Drawing.Point(60, 353)
+        Me.btnMenu.Location = New System.Drawing.Point(59, 367)
         Me.btnMenu.Name = "btnMenu"
         Me.btnMenu.Size = New System.Drawing.Size(116, 56)
         Me.btnMenu.TabIndex = 2
@@ -51,7 +52,7 @@ Partial Class Puntuaciones
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(205, 353)
+        Me.btnSalir.Location = New System.Drawing.Point(204, 367)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(116, 56)
         Me.btnSalir.TabIndex = 3
@@ -60,19 +61,22 @@ Partial Class Puntuaciones
         '
         'txtPuntuacion
         '
-        Me.txtPuntuacion.Location = New System.Drawing.Point(105, 73)
+        Me.txtPuntuacion.BackColor = System.Drawing.Color.White
+        Me.txtPuntuacion.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtPuntuacion.Location = New System.Drawing.Point(105, 62)
         Me.txtPuntuacion.Name = "txtPuntuacion"
         Me.txtPuntuacion.ReadOnly = True
-        Me.txtPuntuacion.Size = New System.Drawing.Size(168, 23)
+        Me.txtPuntuacion.Size = New System.Drawing.Size(168, 29)
         Me.txtPuntuacion.TabIndex = 4
+        Me.txtPuntuacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lblPuntuacion
         '
         Me.lblPuntuacion.AutoSize = True
-        Me.lblPuntuacion.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblPuntuacion.Location = New System.Drawing.Point(105, 41)
+        Me.lblPuntuacion.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblPuntuacion.Location = New System.Drawing.Point(105, 30)
         Me.lblPuntuacion.Name = "lblPuntuacion"
-        Me.lblPuntuacion.Size = New System.Drawing.Size(157, 25)
+        Me.lblPuntuacion.Size = New System.Drawing.Size(167, 25)
         Me.lblPuntuacion.TabIndex = 5
         Me.lblPuntuacion.Text = "Puntuacion Final:"
         '
@@ -80,7 +84,7 @@ Partial Class Puntuaciones
         '
         Me.lblTop10.AutoSize = True
         Me.lblTop10.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblTop10.Location = New System.Drawing.Point(60, 133)
+        Me.lblTop10.Location = New System.Drawing.Point(59, 105)
         Me.lblTop10.Name = "lblTop10"
         Me.lblTop10.Size = New System.Drawing.Size(261, 25)
         Me.lblTop10.TabIndex = 6
@@ -90,7 +94,7 @@ Partial Class Puntuaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(380, 454)
         Me.ControlBox = False
         Me.Controls.Add(Me.lblTop10)
