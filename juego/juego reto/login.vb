@@ -50,7 +50,11 @@ Public Class Login
                     End If
                     cn.Close()
                 Else
-                    MessageBox.Show("USUARIO NO EXISTENTE")
+                    If menu.idioma = "en" Then
+                        lblUsuario.Text = "The username or the password are incorrect"
+                    Else
+                        lblUsuario.Text = "El nombre de usuario o la contraseña son incorrectos"
+                    End If
                 End If
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
