@@ -32,6 +32,11 @@ Public Class amigos
             MessageBox.Show(ex.Message)
         End Try
         cn.Close()
+        If menu.idioma = "en" Then
+            lblAmigos.Text = "Friends:"
+            btnBorrar.Text = "DELETE"
+            btnCerrar.Text = "CLOSE"
+        End If
     End Sub
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         menu.formAmigos = Nothing

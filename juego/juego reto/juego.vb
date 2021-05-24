@@ -17,7 +17,6 @@ Public Class Juego
     Dim arrayResPos(3) As String
     Dim respuestaCorrecta As String
     Dim acierto As Boolean
-    Private idPreg As Integer
     Private readPreg As Linq.JObject
     Public idioma As String
     Public categoria As String
@@ -34,7 +33,7 @@ Public Class Juego
     End Function
 
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles timerImagen.Tick
-        If preguntas < 10 Then
+        If preguntas < 2 Then
             If contador = 0 Then
                 lblNumpregunta.Text = preguntas + 1 & " / 10"
                 btnPausa.Visible = False
@@ -57,9 +56,8 @@ Public Class Juego
 
                 numRandom = CInt(Int((guardarPreguntas.Count * Rnd()) + 0))
                 readPreg = Linq.JObject.Parse(guardarPreguntas.Item(numRandom))
-                Dim tImage As Bitmap = Bitmap.FromStream(New MemoryStream(n.DownloadData("file://///192.168.6.216/juego/categorias/" & readPreg.Item("image_url").ToString)))
-                picFoto.Image = tImage
-                idPreg = Val(readPreg.Item("_id").ToString)
+                Dim stImage As Bitmap = Bitmap.FromStream(New MemoryStream(n.DownloadData("file://///192.168.6.216/juego/categorias/" & readPreg.Item("image_url").ToString)))
+                picFoto.Image = stImage
                 lblPregunta.Text = readPreg.Item("question")(idioma).ToString
                 arrayRespuestas(0) = readPreg.Item("correct")(idioma).ToString
                 respuestaCorrecta = readPreg.Item("correct")(idioma).ToString
@@ -107,10 +105,10 @@ Public Class Juego
             ElseIf contador = 20 Then
                 btnPausa.Visible = True
 
-                Dim json = n.DownloadString("http://192.168.6.218:8080/trivialmi/users/id/" & menu.user)
+                Dim json = n.DownloadString("http://192.168.6.218:8080/trivialmi/users/rated/id/" & menu.user)
                 Dim read = Linq.JObject.Parse(json)
-                If read.Item("data")(0)("rated_questions").ToString.Contains(idPreg) Then
-                    btnValorar.BackColor = Color.HotPink
+                If read.Item("data")(0)("rated_questions").ToString.Contains(readPreg.Item("_id").ToString) Then
+                    btnValorar.BackColor = Color.CornflowerBlue
                 Else
                     btnValorar.BackColor = Color.White
                 End If
@@ -133,10 +131,6 @@ Public Class Juego
                 lblElegido2.Text = Format(arrayElegido(1) / total * 100, "0.##") & "%"
                 lblElegido3.Text = Format(arrayElegido(2) / total * 100, "0.##") & "%"
                 lblElegido4.Text = Format(arrayElegido(3) / total * 100, "0.##") & "%"
-                'lblElegido1.Text = arrayElegido(0) / total * 100 & "%"
-                'lblElegido2.Text = arrayElegido(1) / total * 100 & "%"
-                'lblElegido3.Text = arrayElegido(2) / total * 100 & "%"
-                'lblElegido4.Text = arrayElegido(3) / total * 100 & "%"
                 lblElegido1.BackColor = btnRespuesta1.BackColor
                 lblElegido2.BackColor = btnRespuesta2.BackColor
                 lblElegido3.BackColor = btnRespuesta3.BackColor
@@ -175,6 +169,7 @@ Public Class Juego
             btnVolver.Text = "<<BACK"
             btnPausa.Text = "Pause"
             lblPausar.Text = "Game Paused"
+            lblPuntu.Text = "Score"
         End If
 
 
@@ -185,7 +180,7 @@ Public Class Juego
             Dim reqparm As New Specialized.NameValueCollection
             arrayElegido(0) = arrayElegido(0) + 1
             reqparm.Add(arrayResPos(0), Val(arrayElegido(0)))
-            n.UploadValues("http://192.168.6.218:8080/trivialmi/questions/edit/id/" & readPreg.Item("_id").ToString, "PUT", reqparm)
+            n.UploadValues("http://192.168.6.218:8080/trivialmi/questions/times/id/" & readPreg.Item("_id").ToString, "PUT", reqparm)
 
             contador = 20
             If respuestaCorrecta = btnRespuesta1.Text Then
@@ -202,7 +197,7 @@ Public Class Juego
             Dim reqparm As New Specialized.NameValueCollection
             arrayElegido(1) = arrayElegido(1) + 1
             reqparm.Add(arrayResPos(1), Val(arrayElegido(1)))
-            n.UploadValues("http://192.168.6.218:8080/trivialmi/questions/edit/id/" & readPreg.Item("_id").ToString, "PUT", reqparm)
+            n.UploadValues("http://192.168.6.218:8080/trivialmi/questions/times/id/" & readPreg.Item("_id").ToString, "PUT", reqparm)
 
             contador = 20
             If respuestaCorrecta = btnRespuesta2.Text Then
@@ -219,7 +214,7 @@ Public Class Juego
             Dim reqparm As New Specialized.NameValueCollection
             arrayElegido(2) = arrayElegido(2) + 1
             reqparm.Add(arrayResPos(2), Val(arrayElegido(2)))
-            n.UploadValues("http://192.168.6.218:8080/trivialmi/questions/edit/id/" & readPreg.Item("_id").ToString, "PUT", reqparm)
+            n.UploadValues("http://192.168.6.218:8080/trivialmi/questions/times/id/" & readPreg.Item("_id").ToString, "PUT", reqparm)
 
             contador = 20
             If respuestaCorrecta = btnRespuesta3.Text Then
@@ -236,7 +231,7 @@ Public Class Juego
             Dim reqparm As New Specialized.NameValueCollection
             arrayElegido(3) = arrayElegido(3) + 1
             reqparm.Add(arrayResPos(3), Val(arrayElegido(3)))
-            n.UploadValues("http://192.168.6.218:8080/trivialmi/questions/edit/id/" & readPreg.Item("_id").ToString, "PUT", reqparm)
+            n.UploadValues("http://192.168.6.218:8080/trivialmi/questions/times/id/" & readPreg.Item("_id").ToString, "PUT", reqparm)
 
             contador = 20
             If respuestaCorrecta = btnRespuesta4.Text Then
@@ -278,17 +273,20 @@ Public Class Juego
 
     Private Sub btnValorar_Click(sender As Object, e As EventArgs) Handles btnValorar.Click
         Dim reqparm As New Specialized.NameValueCollection
-        Dim json = n.DownloadString("http://192.168.6.218:8080/trivialmi/users/id/" & menu.user)
-        Dim read = Linq.JObject.Parse(json)
 
         If btnValorar.BackColor = Color.White Then
-            reqparm.Add("data.0.rated_questions", readPreg.Item("_id").ToString)
-            n.UploadValues("http://192.168.6.218:8080/trivialmi/users/edit/id/" & menu.user, "PUT", reqparm)
-            btnValorar.BackColor = Color.HotPink
+            reqparm.Add("rated_questions", readPreg.Item("_id").ToString)
+            n.UploadValues("http://192.168.6.218:8080/trivialmi/users/rated/id/" & menu.user, "PUT", reqparm)
+            btnValorar.BackColor = Color.CornflowerBlue
         Else
-            'reqparm.Add("data", read.Item("data").ToString.Replace(readPreg.Item("_id").ToString, ""))
-            'n.UploadValues("http://192.168.6.218:8080/trivialmi/users/edit/id/" & menu.user, "PUT", reqparm)
+
+            reqparm.Add("rated_questions", readPreg.Item("_id").ToString)
+            n.UploadValues("http://192.168.6.218:8080/trivialmi/users/rated/id/" & menu.user, "DELETE", reqparm)
             btnValorar.BackColor = Color.White
         End If
+    End Sub
+
+    Private Sub lblPregunta_Click(sender As Object, e As EventArgs) Handles lblPregunta.Click
+
     End Sub
 End Class

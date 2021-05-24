@@ -11,16 +11,13 @@ Public Class Login
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If cn Is Nothing Then
-            Return
-        End If
         If menu.idioma = "en" Then
-            lblUser.Text = "User Name/Email:"
+            lblUser.Text = "User Name:"
             lblContraseña.Text = "Password:"
             btnEnviar.Text = "Send"
             btnSalir.Text = "Exit"
         Else
-            lblUser.Text = "Nombre usuario/ Correo:"
+            lblUser.Text = "Nombre usuario:"
             lblContraseña.Text = "Contraseña:"
             btnEnviar.Text = "Enviar"
             btnSalir.Text = "Salir"
@@ -46,7 +43,11 @@ Public Class Login
                     menu.Show()
                     Me.Close()
                     menu.isLogin = True
-                    menu.btnLogin.Text = "CERRAR SESION"
+                    If menu.idioma = "en" Then
+                        menu.btnLogin.Text = "LOGOUT"
+                    Else
+                        menu.btnLogin.Text = "CERRAR SESION"
+                    End If
                     cn.Close()
                 Else
                     MessageBox.Show("USUARIO NO EXISTENTE")

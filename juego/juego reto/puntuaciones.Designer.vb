@@ -22,6 +22,7 @@ Partial Class Puntuaciones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Puntuaciones))
         Me.lstPuntuacion = New System.Windows.Forms.ListBox()
         Me.btnMenu = New System.Windows.Forms.Button()
@@ -29,6 +30,11 @@ Partial Class Puntuaciones
         Me.txtPuntuacion = New System.Windows.Forms.TextBox()
         Me.lblPuntuacion = New System.Windows.Forms.Label()
         Me.lblTop10 = New System.Windows.Forms.Label()
+        Me.pbRuleta2 = New System.Windows.Forms.PictureBox()
+        Me.pbRuleta1 = New System.Windows.Forms.PictureBox()
+        Me.tmRuleta = New System.Windows.Forms.Timer(Me.components)
+        CType(Me.pbRuleta2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbRuleta1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lstPuntuacion
@@ -90,6 +96,31 @@ Partial Class Puntuaciones
         Me.lblTop10.TabIndex = 6
         Me.lblTop10.Text = "Sus 10 mejores puntuaciones:"
         '
+        'pbRuleta2
+        '
+        Me.pbRuleta2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.pbRuleta2.Image = Global.juego_reto.My.Resources.Resources.ruleta_1_
+        Me.pbRuleta2.Location = New System.Drawing.Point(303, 10)
+        Me.pbRuleta2.Name = "pbRuleta2"
+        Me.pbRuleta2.Size = New System.Drawing.Size(65, 81)
+        Me.pbRuleta2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbRuleta2.TabIndex = 7
+        Me.pbRuleta2.TabStop = False
+        '
+        'pbRuleta1
+        '
+        Me.pbRuleta1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.pbRuleta1.Image = Global.juego_reto.My.Resources.Resources.ruleta_1_
+        Me.pbRuleta1.Location = New System.Drawing.Point(12, 10)
+        Me.pbRuleta1.Name = "pbRuleta1"
+        Me.pbRuleta1.Size = New System.Drawing.Size(65, 81)
+        Me.pbRuleta1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbRuleta1.TabIndex = 8
+        Me.pbRuleta1.TabStop = False
+        '
+        'tmRuleta
+        '
+        '
         'Puntuaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -97,6 +128,8 @@ Partial Class Puntuaciones
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(380, 454)
         Me.ControlBox = False
+        Me.Controls.Add(Me.pbRuleta1)
+        Me.Controls.Add(Me.pbRuleta2)
         Me.Controls.Add(Me.lblTop10)
         Me.Controls.Add(Me.lblPuntuacion)
         Me.Controls.Add(Me.txtPuntuacion)
@@ -111,6 +144,8 @@ Partial Class Puntuaciones
         Me.Name = "Puntuaciones"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TRIVIALMI"
+        CType(Me.pbRuleta2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbRuleta1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -122,4 +157,7 @@ Partial Class Puntuaciones
     Friend WithEvents txtPuntuacion As TextBox
     Friend WithEvents lblPuntuacion As Label
     Friend WithEvents lblTop10 As Label
+    Friend WithEvents pbRuleta2 As PictureBox
+    Friend WithEvents pbRuleta1 As PictureBox
+    Friend WithEvents tmRuleta As Timer
 End Class

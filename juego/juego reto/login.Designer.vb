@@ -37,17 +37,17 @@ Partial Class Login
         '
         'lblUser
         '
-        Me.lblUser.Location = New System.Drawing.Point(83, 56)
+        Me.lblUser.Location = New System.Drawing.Point(129, 53)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblUser.Size = New System.Drawing.Size(148, 23)
+        Me.lblUser.Size = New System.Drawing.Size(99, 23)
         Me.lblUser.TabIndex = 0
-        Me.lblUser.Text = "Nombre Usuario/ Correo:"
+        Me.lblUser.Text = "Nombre Usuario:"
         Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'lblContraseña
         '
-        Me.lblContraseña.Location = New System.Drawing.Point(155, 104)
+        Me.lblContraseña.Location = New System.Drawing.Point(152, 98)
         Me.lblContraseña.Name = "lblContraseña"
         Me.lblContraseña.Size = New System.Drawing.Size(76, 23)
         Me.lblContraseña.TabIndex = 1
@@ -56,7 +56,7 @@ Partial Class Login
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(237, 105)
+        Me.txtPassword.Location = New System.Drawing.Point(234, 99)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(222, 23)
@@ -64,7 +64,7 @@ Partial Class Login
         '
         'txtUser
         '
-        Me.txtUser.Location = New System.Drawing.Point(237, 56)
+        Me.txtUser.Location = New System.Drawing.Point(234, 54)
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(222, 23)
         Me.txtUser.TabIndex = 1
@@ -73,7 +73,7 @@ Partial Class Login
         '
         Me.btnSalir.BackColor = System.Drawing.Color.White
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalir.Location = New System.Drawing.Point(361, 172)
+        Me.btnSalir.Location = New System.Drawing.Point(358, 152)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(98, 53)
         Me.btnSalir.TabIndex = 4
@@ -84,7 +84,7 @@ Partial Class Login
         '
         Me.btnEnviar.BackColor = System.Drawing.Color.White
         Me.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEnviar.Location = New System.Drawing.Point(237, 172)
+        Me.btnEnviar.Location = New System.Drawing.Point(234, 152)
         Me.btnEnviar.Name = "btnEnviar"
         Me.btnEnviar.Size = New System.Drawing.Size(98, 53)
         Me.btnEnviar.TabIndex = 3
@@ -94,7 +94,7 @@ Partial Class Login
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.juego_reto.My.Resources.Resources.user
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 56)
+        Me.PictureBox1.Location = New System.Drawing.Point(91, 48)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(32, 29)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -104,7 +104,7 @@ Partial Class Login
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.juego_reto.My.Resources.Resources.password
-        Me.PictureBox2.Location = New System.Drawing.Point(117, 98)
+        Me.PictureBox2.Location = New System.Drawing.Point(114, 91)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(32, 30)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -116,6 +116,7 @@ Partial Class Login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.juego_reto.My.Resources.Resources.login2
         Me.ClientSize = New System.Drawing.Size(527, 268)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox2)

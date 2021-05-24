@@ -5,6 +5,8 @@ Public Class Puntuaciones
     Public menu As menu
     Public puntuacion As Integer
     Dim contador As Integer = 1
+    Dim contadorruleta As Integer = 0
+    Dim rotacion(3) As RotateFlipType
     Private Sub puntuaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cn = conectar()
         txtPuntuacion.Text = puntuacion
@@ -32,7 +34,17 @@ Public Class Puntuaciones
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-
+        rotacion(0) = RotateFlipType.Rotate90FlipNone
+        rotacion(1) = RotateFlipType.Rotate180FlipNone
+        rotacion(2) = RotateFlipType.Rotate270FlipNone
+        rotacion(3) = RotateFlipType.RotateNoneFlipNone
+        tmRuleta.Start()
+        If menu.idioma = "en" Then
+            lblPuntuacion.Text = "Final Score:"
+            lblTop10.Text = "Your top 10 scores:"
+            btnMenu.Text = "MAIN MENU"
+            btnSalir.Text = "EXIT"
+        End If
     End Sub
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
         Me.Close()
@@ -41,5 +53,16 @@ Public Class Puntuaciones
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         End
+    End Sub
+
+    Private Sub tmRuleta_Tick(sender As Object, e As EventArgs) Handles tmRuleta.Tick
+        If contadorruleta = 4 Then
+            contadorruleta = 0
+        End If
+        pbRuleta1.Image.RotateFlip(rotacion(contadorruleta))
+        pbRuleta2.Image.RotateFlip(rotacion(contadorruleta))
+        pbRuleta1.Refresh()
+        pbRuleta2.Refresh()
+        contadorruleta += 1
     End Sub
 End Class

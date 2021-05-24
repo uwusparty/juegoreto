@@ -36,7 +36,7 @@ Partial Class Juego
         Me.btnValorar = New System.Windows.Forms.Button()
         Me.btnPausa = New System.Windows.Forms.Button()
         Me.lblPuntuacion = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPuntu = New System.Windows.Forms.Label()
         Me.lblNumpregunta = New System.Windows.Forms.Label()
         Me.lblPausar = New System.Windows.Forms.Label()
         Me.lblElegido1 = New System.Windows.Forms.Label()
@@ -77,6 +77,7 @@ Partial Class Juego
         Me.lblPregunta.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.lblPregunta.Location = New System.Drawing.Point(97, 52)
         Me.lblPregunta.Name = "lblPregunta"
+        Me.lblPregunta.Padding = New System.Windows.Forms.Padding(5)
         Me.lblPregunta.Size = New System.Drawing.Size(593, 131)
         Me.lblPregunta.TabIndex = 5
         Me.lblPregunta.Text = "Pregunta"
@@ -141,13 +142,15 @@ Partial Class Juego
         '
         'btnValorar
         '
-        Me.btnValorar.BackColor = System.Drawing.Color.White
+        Me.btnValorar.BackColor = System.Drawing.Color.Transparent
+        Me.btnValorar.BackgroundImage = Global.juego_reto.My.Resources.Resources.valorarpreguntas1
+        Me.btnValorar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnValorar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnValorar.Location = New System.Drawing.Point(12, 202)
+        Me.btnValorar.Location = New System.Drawing.Point(12, 192)
         Me.btnValorar.Name = "btnValorar"
-        Me.btnValorar.Size = New System.Drawing.Size(102, 29)
+        Me.btnValorar.Padding = New System.Windows.Forms.Padding(5)
+        Me.btnValorar.Size = New System.Drawing.Size(58, 47)
         Me.btnValorar.TabIndex = 11
-        Me.btnValorar.Text = "<3"
         Me.btnValorar.UseVisualStyleBackColor = False
         Me.btnValorar.Visible = False
         '
@@ -173,16 +176,16 @@ Partial Class Juego
         Me.lblPuntuacion.TabIndex = 15
         Me.lblPuntuacion.Text = "0"
         '
-        'Label1
+        'lblPuntu
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(294, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 28)
-        Me.Label1.TabIndex = 16
-        Me.Label1.Text = "Puntuacion:"
+        Me.lblPuntu.AutoSize = True
+        Me.lblPuntu.BackColor = System.Drawing.Color.Transparent
+        Me.lblPuntu.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblPuntu.Location = New System.Drawing.Point(294, 12)
+        Me.lblPuntu.Name = "lblPuntu"
+        Me.lblPuntu.Size = New System.Drawing.Size(114, 28)
+        Me.lblPuntu.TabIndex = 16
+        Me.lblPuntu.Text = "Puntuacion:"
         '
         'lblNumpregunta
         '
@@ -269,7 +272,7 @@ Partial Class Juego
         Me.Controls.Add(Me.lblElegido1)
         Me.Controls.Add(Me.lblPausar)
         Me.Controls.Add(Me.lblNumpregunta)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblPuntu)
         Me.Controls.Add(Me.lblPuntuacion)
         Me.Controls.Add(Me.btnPausa)
         Me.Controls.Add(Me.btnValorar)
@@ -307,7 +310,7 @@ Partial Class Juego
     Friend WithEvents btnValorar As Button
     Friend WithEvents btnPausa As Button
     Friend WithEvents lblPuntuacion As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblPuntu As Label
     Friend WithEvents lblNumpregunta As Label
     Friend WithEvents lblPausar As Label
     Friend WithEvents lblElegido1 As Label
