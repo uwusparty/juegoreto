@@ -40,35 +40,41 @@ Partial Class amigos
         'lblAmigos
         '
         Me.lblAmigos.AutoSize = True
-        Me.lblAmigos.Location = New System.Drawing.Point(28, 20)
+        Me.lblAmigos.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblAmigos.Location = New System.Drawing.Point(28, 9)
         Me.lblAmigos.Name = "lblAmigos"
-        Me.lblAmigos.Size = New System.Drawing.Size(51, 15)
+        Me.lblAmigos.Size = New System.Drawing.Size(88, 28)
         Me.lblAmigos.TabIndex = 1
         Me.lblAmigos.Text = "Amigos:"
         '
         'btnBorrar
         '
+        Me.btnBorrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnBorrar.ForeColor = System.Drawing.Color.White
         Me.btnBorrar.Location = New System.Drawing.Point(28, 389)
         Me.btnBorrar.Name = "btnBorrar"
         Me.btnBorrar.Size = New System.Drawing.Size(84, 33)
         Me.btnBorrar.TabIndex = 2
         Me.btnBorrar.Text = "BORRAR"
-        Me.btnBorrar.UseVisualStyleBackColor = True
+        Me.btnBorrar.UseVisualStyleBackColor = False
         '
         'btnCerrar
         '
+        Me.btnCerrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
         Me.btnCerrar.Location = New System.Drawing.Point(128, 389)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(81, 33)
         Me.btnCerrar.TabIndex = 3
         Me.btnCerrar.Text = "CERRAR"
-        Me.btnCerrar.UseVisualStyleBackColor = True
+        Me.btnCerrar.UseVisualStyleBackColor = False
         '
         'amigos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.juego_reto.My.Resources.Resources.amigos1
         Me.ClientSize = New System.Drawing.Size(235, 433)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnCerrar)

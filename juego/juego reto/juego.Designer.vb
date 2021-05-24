@@ -43,6 +43,7 @@ Partial Class Juego
         Me.lblElegido3 = New System.Windows.Forms.Label()
         Me.lblElegido2 = New System.Windows.Forms.Label()
         Me.lblElegido4 = New System.Windows.Forms.Label()
+        Me.timerMilisegundos = New System.Windows.Forms.Timer(Me.components)
         CType(Me.picFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -258,6 +259,10 @@ Partial Class Juego
         Me.lblElegido4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.lblElegido4.Visible = False
         '
+        'timerMilisegundos
+        '
+        Me.timerMilisegundos.Interval = 10
+        '
         'Juego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -317,4 +322,5 @@ Partial Class Juego
     Friend WithEvents lblElegido3 As Label
     Friend WithEvents lblElegido2 As Label
     Friend WithEvents lblElegido4 As Label
+    Friend WithEvents timerMilisegundos As Timer
 End Class

@@ -71,24 +71,26 @@ Partial Class Login
         '
         'btnSalir
         '
-        Me.btnSalir.BackColor = System.Drawing.Color.White
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
         Me.btnSalir.Location = New System.Drawing.Point(358, 152)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(98, 53)
         Me.btnSalir.TabIndex = 4
-        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.Text = "SALIR"
         Me.btnSalir.UseVisualStyleBackColor = False
         '
         'btnEnviar
         '
-        Me.btnEnviar.BackColor = System.Drawing.Color.White
+        Me.btnEnviar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEnviar.ForeColor = System.Drawing.Color.White
         Me.btnEnviar.Location = New System.Drawing.Point(234, 152)
         Me.btnEnviar.Name = "btnEnviar"
         Me.btnEnviar.Size = New System.Drawing.Size(98, 53)
         Me.btnEnviar.TabIndex = 3
-        Me.btnEnviar.Text = "Enviar"
+        Me.btnEnviar.Text = "ENVIAR"
         Me.btnEnviar.UseVisualStyleBackColor = False
         '
         'PictureBox1

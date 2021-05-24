@@ -14,13 +14,13 @@ Public Class Login
         If menu.idioma = "en" Then
             lblUser.Text = "User Name:"
             lblContraseña.Text = "Password:"
-            btnEnviar.Text = "Send"
-            btnSalir.Text = "Exit"
+            btnEnviar.Text = "SEND"
+            btnSalir.Text = "EXIT"
         Else
             lblUser.Text = "Nombre usuario:"
             lblContraseña.Text = "Contraseña:"
-            btnEnviar.Text = "Enviar"
-            btnSalir.Text = "Salir"
+            btnEnviar.Text = "ENVIAR"
+            btnSalir.Text = "SALIR"
         End If
     End Sub
 

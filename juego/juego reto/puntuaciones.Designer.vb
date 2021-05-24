@@ -49,21 +49,25 @@ Partial Class Puntuaciones
         '
         'btnMenu
         '
+        Me.btnMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnMenu.ForeColor = System.Drawing.Color.White
         Me.btnMenu.Location = New System.Drawing.Point(59, 367)
         Me.btnMenu.Name = "btnMenu"
         Me.btnMenu.Size = New System.Drawing.Size(116, 56)
         Me.btnMenu.TabIndex = 2
         Me.btnMenu.Text = "MENU PRINCIPAL"
-        Me.btnMenu.UseVisualStyleBackColor = True
+        Me.btnMenu.UseVisualStyleBackColor = False
         '
         'btnSalir
         '
+        Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
         Me.btnSalir.Location = New System.Drawing.Point(204, 367)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(116, 56)
         Me.btnSalir.TabIndex = 3
         Me.btnSalir.Text = "SALIR"
-        Me.btnSalir.UseVisualStyleBackColor = True
+        Me.btnSalir.UseVisualStyleBackColor = False
         '
         'txtPuntuacion
         '

@@ -21,6 +21,7 @@ Public Class Juego
     Public idioma As String
     Public categoria As String
     Public menu As menu
+    Dim milisegundos As Integer = 0
 
     Public Function getPreguntas() As List(Of String)
         Dim json = n.DownloadString("http://192.168.6.218:8080/trivialmi/questions/" & categoria)
@@ -33,8 +34,9 @@ Public Class Juego
     End Function
 
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles timerImagen.Tick
-        If preguntas < 2 Then
+        If preguntas < 10 Then
             If contador = 0 Then
+                milisegundos = 0
                 lblNumpregunta.Text = preguntas + 1 & " / 10"
                 btnPausa.Visible = False
                 btnValorar.Visible = False
@@ -56,7 +58,13 @@ Public Class Juego
 
                 numRandom = CInt(Int((guardarPreguntas.Count * Rnd()) + 0))
                 readPreg = Linq.JObject.Parse(guardarPreguntas.Item(numRandom))
-                Dim stImage As Bitmap = Bitmap.FromStream(New MemoryStream(n.DownloadData("file://///192.168.6.216/juego/categorias/" & readPreg.Item("image_url").ToString)))
+                Dim stImage As Bitmap
+                Try
+                    stImage = Bitmap.FromStream(New MemoryStream(n.DownloadData("file://///192.168.6.216/juego/categorias/" & readPreg.Item("image_url").ToString)))
+                Catch ex As Exception
+                    stImage = Bitmap.FromStream(New MemoryStream(n.DownloadData("file://///192.168.6.216/juego/noimage.png")))
+                End Try
+
                 picFoto.Image = stImage
                 lblPregunta.Text = readPreg.Item("question")(idioma).ToString
                 arrayRespuestas(0) = readPreg.Item("correct")(idioma).ToString
@@ -162,6 +170,7 @@ Public Class Juego
     End Sub
 
     Private Sub juego_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        timerMilisegundos.Start()
         timerImagen.Start()
         guardarPreguntas = getPreguntas()
         Randomize()
@@ -185,7 +194,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta1.Text Then
                 btnRespuesta1.BackColor = Color.YellowGreen
-                puntuacion += 100 * contpregunta
+                puntuacion += 1500 - milisegundos
                 acierto = True
             Else
                 btnRespuesta1.BackColor = Color.IndianRed
@@ -202,7 +211,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta2.Text Then
                 btnRespuesta2.BackColor = Color.YellowGreen
-                puntuacion += 100 * contpregunta
+                puntuacion += 1500 - milisegundos
                 acierto = True
             Else
                 btnRespuesta2.BackColor = Color.IndianRed
@@ -219,7 +228,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta3.Text Then
                 btnRespuesta3.BackColor = Color.YellowGreen
-                puntuacion += 100 * contpregunta
+                puntuacion += 1500 - milisegundos
                 acierto = True
             Else
                 btnRespuesta3.BackColor = Color.IndianRed
@@ -236,7 +245,7 @@ Public Class Juego
             contador = 20
             If respuestaCorrecta = btnRespuesta4.Text Then
                 btnRespuesta4.BackColor = Color.YellowGreen
-                puntuacion += 100 * contpregunta
+                puntuacion += 1500 - milisegundos
                 acierto = True
             Else
                 btnRespuesta4.BackColor = Color.IndianRed
@@ -286,7 +295,7 @@ Public Class Juego
         End If
     End Sub
 
-    Private Sub lblPregunta_Click(sender As Object, e As EventArgs) Handles lblPregunta.Click
-
+    Private Sub timerMilisegundos_Tick(sender As Object, e As EventArgs) Handles timerMilisegundos.Tick
+        milisegundos += 1
     End Sub
 End Class
