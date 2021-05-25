@@ -79,10 +79,10 @@ Partial Class Login
         Me.btnSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.ForeColor = System.Drawing.Color.White
-        Me.btnSalir.Location = New System.Drawing.Point(329, 192)
+        Me.btnSalir.Location = New System.Drawing.Point(395, 201)
         Me.btnSalir.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(124, 66)
+        Me.btnSalir.Size = New System.Drawing.Size(124, 45)
         Me.btnSalir.TabIndex = 4
         Me.btnSalir.Text = "SALIR"
         Me.btnSalir.UseVisualStyleBackColor = False
@@ -92,10 +92,10 @@ Partial Class Login
         Me.btnEnviar.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEnviar.ForeColor = System.Drawing.Color.White
-        Me.btnEnviar.Location = New System.Drawing.Point(151, 192)
+        Me.btnEnviar.Location = New System.Drawing.Point(217, 201)
         Me.btnEnviar.Margin = New System.Windows.Forms.Padding(5, 6, 5, 6)
         Me.btnEnviar.Name = "btnEnviar"
-        Me.btnEnviar.Size = New System.Drawing.Size(124, 66)
+        Me.btnEnviar.Size = New System.Drawing.Size(124, 45)
         Me.btnEnviar.TabIndex = 3
         Me.btnEnviar.Text = "ENVIAR"
         Me.btnEnviar.UseVisualStyleBackColor = False
@@ -127,7 +127,7 @@ Partial Class Login
         Me.lblUsuario.AutoSize = True
         Me.lblUsuario.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblUsuario.ForeColor = System.Drawing.Color.Red
-        Me.lblUsuario.Location = New System.Drawing.Point(254, 24)
+        Me.lblUsuario.Location = New System.Drawing.Point(43, 22)
         Me.lblUsuario.Name = "lblUsuario"
         Me.lblUsuario.Size = New System.Drawing.Size(69, 28)
         Me.lblUsuario.TabIndex = 9

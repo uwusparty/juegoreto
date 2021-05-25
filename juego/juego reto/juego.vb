@@ -34,7 +34,7 @@ Public Class Juego
     End Function
 
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles timerImagen.Tick
-        If preguntas < 2 Then
+        If preguntas < 10 Then
             If contador = 0 Then
                 milisegundos = 0
                 lblNumpregunta.Text = preguntas + 1 & " / 10"

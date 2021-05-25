@@ -50,10 +50,12 @@ Public Class Login
                     End If
                     cn.Close()
                 Else
-                    If menu.idioma = "en" Then
-                        lblUsuario.Text = "The username or the password are incorrect"
-                    Else
+                    If menu.idioma = "es" Then
+                        lblUsuario.Show()
                         lblUsuario.Text = "El nombre de usuario o la contraseña son incorrectos"
+                    Else
+                        lblUsuario.Show()
+                        lblUsuario.Text = "The username or the password are incorrect"
                     End If
                 End If
             Catch ex As Exception

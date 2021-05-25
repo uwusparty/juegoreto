@@ -9,15 +9,17 @@ Public Class Puntuaciones
     Dim rotacion(3) As RotateFlipType
     Private Sub puntuaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cn = conectar()
-        txtPuntuacion.Text = puntuacion
         Dim cmd As MySqlCommand
         Dim dr As MySqlDataReader
-        cmd = New MySqlCommand("insert into scores (id_user ,score, date) VALUES (? , ?,  ?);", cn)
-        cmd.Parameters.Add(New MySqlParameter("id_user", menu.user))
-        cmd.Parameters.Add(New MySqlParameter("score", puntuacion))
-        cmd.Parameters.Add(New MySqlParameter("date", Today))
-        cmd.ExecuteNonQuery()
-
+        'cmd = New MySqlCommand("insert into scores (id_user ,score, date) VALUES (? , ?,  ?);", cn)
+        cmd = New MySqlCommand("subir_puntuacion", cn)
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.Parameters.AddWithValue("@id_usuario", menu.user)
+        cmd.Parameters.AddWithValue("@scoreRec", puntuacion)
+        cmd.Parameters.Add("@resultado", SqlDbType.Int)
+        cmd.Parameters("@resultado").Direction = ParameterDirection.ReturnValue
+        cmd.ExecuteScalar()
+        txtPuntuacion.Text = cmd.Parameters("@resultado").Value
         cmd = New MySqlCommand("select score from scores where id_user=? order by score desc LIMIT 10", cn)
         cmd.Parameters.Add(New MySqlParameter("id_user", menu.user))
         Try
