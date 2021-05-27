@@ -41,6 +41,7 @@ Public Class Juego
                 btnPausa.Visible = False
                 btnValorar.Visible = False
                 lblLikes.Visible = False
+                lblLike.Visible = False
                 acierto = False
                 lblPregunta.Hide()
                 btnRespuesta1.Hide()
@@ -125,6 +126,7 @@ Public Class Juego
                 End If
                 btnValorar.Visible = True
                 lblLikes.Visible = True
+                lblLike.Visible = True
                 If acierto = False Then
                     If respuestaCorrecta = btnRespuesta1.Text Then
                         btnRespuesta1.BackColor = Color.YellowGreen
@@ -306,7 +308,4 @@ Public Class Juego
         milisegundos += 1
     End Sub
 
-    Private Sub lblLikes_Click(sender As Object, e As EventArgs) Handles lblLikes.Click
-
-    End Sub
 End Class
