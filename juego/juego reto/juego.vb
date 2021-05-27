@@ -40,6 +40,7 @@ Public Class Juego
                 lblNumpregunta.Text = preguntas + 1 & " / 10"
                 btnPausa.Visible = False
                 btnValorar.Visible = False
+                lblLikes.Visible = False
                 acierto = False
                 lblPregunta.Hide()
                 btnRespuesta1.Hide()
@@ -112,7 +113,9 @@ Public Class Juego
                 contador += 1
             ElseIf contador = 20 Then
                 btnPausa.Visible = True
-
+                Dim jsonlike = n.DownloadString("http://192.168.6.218:8080/trivialmi/questions/likes/id/" & readPreg.Item("_id").ToString)
+                Dim readlike = Linq.JObject.Parse(jsonlike)
+                lblLikes.Text = readlike.Item("data")
                 Dim json = n.DownloadString("http://192.168.6.218:8080/trivialmi/users/rated/id/" & menu.user)
                 Dim read = Linq.JObject.Parse(json)
                 If read.Item("data")(0)("rated_questions").ToString.Contains(readPreg.Item("_id").ToString) Then
@@ -121,6 +124,7 @@ Public Class Juego
                     btnValorar.BackColor = Color.White
                 End If
                 btnValorar.Visible = True
+                lblLikes.Visible = True
                 If acierto = False Then
                     If respuestaCorrecta = btnRespuesta1.Text Then
                         btnRespuesta1.BackColor = Color.YellowGreen
@@ -287,15 +291,22 @@ Public Class Juego
             reqparm.Add("rated_questions", readPreg.Item("_id").ToString)
             n.UploadValues("http://192.168.6.218:8080/trivialmi/users/rated/id/" & menu.user, "PUT", reqparm)
             btnValorar.BackColor = Color.CornflowerBlue
+            lblLikes.Text = Val(lblLikes.Text) + 1
         Else
 
             reqparm.Add("rated_questions", readPreg.Item("_id").ToString)
             n.UploadValues("http://192.168.6.218:8080/trivialmi/users/rated/id/" & menu.user, "DELETE", reqparm)
             btnValorar.BackColor = Color.White
+            lblLikes.Text = Val(lblLikes.Text) - 1
         End If
+
     End Sub
 
     Private Sub timerMilisegundos_Tick(sender As Object, e As EventArgs) Handles timerMilisegundos.Tick
         milisegundos += 1
+    End Sub
+
+    Private Sub lblLikes_Click(sender As Object, e As EventArgs) Handles lblLikes.Click
+
     End Sub
 End Class

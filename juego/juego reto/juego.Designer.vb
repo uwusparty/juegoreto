@@ -44,6 +44,7 @@ Partial Class Juego
         Me.lblElegido2 = New System.Windows.Forms.Label()
         Me.lblElegido4 = New System.Windows.Forms.Label()
         Me.timerMilisegundos = New System.Windows.Forms.Timer(Me.components)
+        Me.lblLikes = New System.Windows.Forms.Label()
         CType(Me.picFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -263,6 +264,16 @@ Partial Class Juego
         '
         Me.timerMilisegundos.Interval = 10
         '
+        'lblLikes
+        '
+        Me.lblLikes.AutoSize = True
+        Me.lblLikes.Location = New System.Drawing.Point(12, 168)
+        Me.lblLikes.Name = "lblLikes"
+        Me.lblLikes.Size = New System.Drawing.Size(13, 15)
+        Me.lblLikes.TabIndex = 23
+        Me.lblLikes.Text = "0"
+        Me.lblLikes.Visible = False
+        '
         'Juego
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -271,6 +282,7 @@ Partial Class Juego
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(797, 538)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblLikes)
         Me.Controls.Add(Me.lblElegido4)
         Me.Controls.Add(Me.lblElegido2)
         Me.Controls.Add(Me.lblElegido3)
@@ -323,4 +335,5 @@ Partial Class Juego
     Friend WithEvents lblElegido2 As Label
     Friend WithEvents lblElegido4 As Label
     Friend WithEvents timerMilisegundos As Timer
+    Friend WithEvents lblLikes As Label
 End Class
